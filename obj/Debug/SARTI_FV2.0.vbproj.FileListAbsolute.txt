@@ -1,0 +1,11 @@
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\bin\SARTI_FV2.0.dll.config
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\bin\SARTI_FV2.0.dll
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\bin\SARTI_FV2.0.pdb
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\bin\SARTI_FV2.0.xml
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\obj\Debug\SARTI_FV2.0.vbprojAssemblyReference.cache
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\obj\Debug\SARTI_FV2._0.Resources.resources
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\obj\Debug\SARTI_FV2.0.vbproj.GenerateResource.cache
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\obj\Debug\SARTI_FV2.0.vbproj.CoreCompileInputs.cache
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\obj\Debug\SARTI_FV2.0.dll
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\obj\Debug\SARTI_FV2.0.xml
+C:\Users\alan.medrano\Source\Repos\SARTI_FV2.0\obj\Debug\SARTI_FV2.0.pdb

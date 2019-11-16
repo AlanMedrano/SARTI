@@ -1,0 +1,168 @@
+﻿'------------------------------------------------------------------------------
+' <generado automáticamente>
+'     Este código fue generado por una herramienta.
+'
+'     Los cambios en este archivo podrían causar un comportamiento incorrecto y se perderán si
+'     se vuelve a generar el código. 
+' </generado automáticamente>
+'------------------------------------------------------------------------------
+
+Option Strict On
+Option Explicit On
+
+
+Partial Public Class ModificarEquipo
+    
+    '''<summary>
+    '''Control lbl_NSerie.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_NSerie As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_Modelo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_Modelo As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_Marca.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_Marca As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_TipoEquipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_TipoEquipo As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_FechaCompra.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_FechaCompra As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_procesador.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_procesador As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_PuertosUSB.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_PuertosUSB As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_PuertosHDMI.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_PuertosHDMI As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_PuertosVGA.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_PuertosVGA As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_PuertosRed.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_PuertosRed As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_UnidadCD.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_UnidadCD As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_Garantia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_Garantia As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_RAM.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_RAM As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_DiscoDuro.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_DiscoDuro As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_NumFactura.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_NumFactura As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_fallas.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_fallas As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_Detalles.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_Detalles As Global.System.Web.UI.WebControls.Label
+End Class

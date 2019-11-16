@@ -1,0 +1,14 @@
+﻿body {
+}
+
+.texto {
+    color: #3B71B2;
+}
+
+@media print {
+    /* Reglas CSS para impresión */
+    #header {
+        text-align: left;
+        color: cornflowerblue;
+    }
+}
