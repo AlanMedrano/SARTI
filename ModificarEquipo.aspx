@@ -90,7 +90,7 @@
          <div class="pb-2 mt-4 mb-2 border-bottom">
         <H2 class="texto">Modificar equipo.</H2>
     </div><br/>
-         <form method="post" action="ModificarEquipo.aspx" onsubmit="" runat="server">    
+         <form method="post" action="ModificarEquipo.aspx" runat="server">    
          <!-- AREA DE CONSULTA DE DATOS DEL EQUIPO -->
          <div class="row">
              <div class="col-lg-2">
@@ -153,7 +153,20 @@
              <div class="col-lg-3">
                  <b>Detalles: </b> <asp:Label ID="lbl_Detalles" runat="server" Text=""></asp:Label>
              </div>
-         </div><br /><br />
+         </div>
+
+             <b>Bluetooth: </b><asp:Label ID="lbl_bluetooth" runat="server" Text=""></asp:Label>
+             
+             
+             <br /><br />
+
+             <asp:Panel ID="pnl_mensaje" runat="server" Visible="false">
+                <div class="alert alert-success" role="alert">
+                    El Equipo se modificado exitosamente.
+                </div>
+             </asp:Panel>
+
+             <br /><br />
            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 Actualizar datos de equipo
             </button><br /><br />
@@ -259,15 +272,17 @@
 
             </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <br />
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="inp_bluetooth" name="inp_bluetooth">
-                            <label class="custom-control-label" for="inp_bluetooth">Bluetooth</label>
-                        </div>
+                        <p>Bluetooth:</p>
+                        <asp:DropDownList ID="inp_bluetooth" runat="server" CssClass="form-control">
+                            <asp:ListItem Value=""></asp:ListItem>
+                            <asp:ListItem Value="1">Si</asp:ListItem>
+                            <asp:ListItem Value="0">No</asp:ListItem>
+                        </asp:DropDownList>
                     </div>
                     <div class="col-lg-4"></div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-5">
                         
                     </div>
                 </div>
