@@ -7,24 +7,17 @@ Public Class ModificarEquipo
         If Session("Correo") = "" Then ' Valido usuario logeado.
             Response.Redirect("Default.aspx")
         End If
-        ' 
+        Dim IdEquipo As Integer = Page.Request.QueryString("Equipo")
+
+        If IdEquipo <> 0 Then
+            Session("Modifica_IdEquipo") = IdEquipo
+        Else
+            IdEquipo = Session("Modifica_IdEquipo")
+        End If
+
         If IsPostBack Then
             Dim modelo, marca, fecha_compra, detalles, falla, num_factura, num_serie, procesador, ram, disco_duro As String
-            Dim puertos_usb, puertos_hdmi, puertos_vga, puertos_red, unidad_cd, tiempo_garantia As String
-            Dim IdEquipo As String
-            Dim Query As String = "UPDATE Usuario SET "
-            Dim Datos = New String() {Trim(modelo), Trim(marca), Trim(fecha_compra), Trim(detalles), Trim(falla), Trim(num_factura), Trim(num_serie), Trim(procesador), Trim(ram), Trim(disco_duro), Trim(puertos_usb), Trim(puertos_hdmi), Trim(puertos_vga), Trim(puertos_red), Trim(unidad_cd), Trim(tiempo_garantia)}
-            Dim valores = New String() {"Modelo='", "Marca='", "FechaCompra='", "Detalles='", "Falla='", "Numfactura='", "N_Serie='", "procesador='", "ram='", "DiscoDuro='", "PuertoUSB=", "PuertoHDMI=", "PuertoVGA=", "PuertoRed=", "UnidadCD=", "TiempoGarantia="}
-            Dim update(16) As String
-            Dim QUERY_UPDATE As String = "UPDATE Equipo SET "
-            'CONTADORES...
-            Dim v As Integer
-            Dim cont As Integer
-            Dim i As Integer
-            v = 0
-            cont = 0
-            i = 0
-            IdEquipo = Page.Request.Form.Item("")
+            Dim puertos_usb, puertos_hdmi, puertos_vga, puertos_red, unidad_cd, tiempo_garantia, Bluetooth As String
             modelo = Page.Request.Form.Item("modelo")
             marca = Page.Request.Form.Item("marca")
             fecha_compra = Page.Request.Form.Item("feccompra")
@@ -41,6 +34,23 @@ Public Class ModificarEquipo
             puertos_red = Page.Request.Form.Item("Puertod_red")
             unidad_cd = Page.Request.Form.Item("cd")
             tiempo_garantia = Page.Request.Form.Item("tiempogarantia")
+            Bluetooth = Page.Request.Form.Item("inp_bluetooth")
+
+            Dim Query As String = "UPDATE Usuario SET "
+            Dim Datos = New String() {Trim(modelo), Trim(marca), Trim(fecha_compra), Trim(detalles), Trim(falla), Trim(num_factura), Trim(num_serie), Trim(procesador), Trim(ram), Trim(disco_duro), Trim(puertos_usb), Trim(puertos_hdmi), Trim(puertos_vga), Trim(puertos_red), Trim(unidad_cd), Trim(tiempo_garantia), Trim(Bluetooth)}
+            Dim valores = New String() {"Modelo='", "Marca='", "FechaCompra='", "Detalles='", "Falla='", "Numfactura='", "N_Serie='", "procesador='", "ram='", "DiscoDuro='", "PuertoUSB=", "PuertoHDMI=", "PuertoVGA=", "PuertoRed=", "UnidadCD=", "TiempoGarantia=", "Bluetooth="}
+            '   Dim Datos(,) As String = {{"Modelo='", Trim(modelo)}, {"Marca='", Trim(marca)}, {"FechaCompra='",Trim(fecha_compra)}, {,}, {,}}
+            Dim update(17) As String
+            Dim QUERY_UPDATE As String = "UPDATE Equipo SET "
+            'CONTADORES...
+            Dim v As Integer
+            Dim cont As Integer
+            Dim i As Integer
+            v = 0
+            cont = 0
+            i = 1
+
+
 
 
             For Each item In Datos
@@ -69,26 +79,26 @@ Public Class ModificarEquipo
 
 
 
-            'QUERY_UPDATE = QUERY_UPDATE & " WHERE IdEquipo= " & IdEquipo
+            QUERY_UPDATE = QUERY_UPDATE & " WHERE IdEquipo= " & IdEquipo
 
-            'Dim registro As SqlDataReader
-            'Dim conn As New SqlConnection(System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
-            'conn.Open()
-            'Dim cmd As SqlCommand = New SqlCommand(QUERY_UPDATE, conn)
-            'cmd.CommandType = CommandType.Text
-            'registro = cmd.ExecuteReader()
-            'pnl_mensaje.Visible = True
+            Dim registro As SqlDataReader
+            Dim conn As New SqlConnection(System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
+            conn.Open()
+            Dim cmd As SqlCommand = New SqlCommand(QUERY_UPDATE, conn)
+            cmd.CommandType = CommandType.Text
+            registro = cmd.ExecuteReader()
+            pnl_mensaje.Visible = True
 
 
 
 
         End If
 
-        If IsPostBack = False Then
-            Dim IdEquipo As Integer = Page.Request.QueryString("Equipo")
 
-            ' Obtenemos los datos del usuario
-            Dim r As SqlDataReader
+
+
+        ' Obtenemos los datos del usuario
+        Dim r As SqlDataReader
             Dim cn As New SqlConnection(System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
             cn.Open()
             Dim command As SqlCommand = New SqlCommand("GetDatosEquipo", cn)
@@ -115,10 +125,19 @@ Public Class ModificarEquipo
                 lbl_RAM.Text = r("ram")
                 lbl_TipoEquipo.Text = r("TipoEquipo")
                 lbl_UnidadCD.Text = r("UnidadCD")
+
+            If (r("Bluetooth") = 1) Then
+                lbl_bluetooth.Text = "Si"
+            Else
+                lbl_bluetooth.Text = "No"
             End If
-            cn.Close()
+
 
         End If
+
+        cn.Close()
+
+
 
 
     End Sub
