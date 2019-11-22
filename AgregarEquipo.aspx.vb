@@ -49,9 +49,9 @@ Public Class AgregarEquipo
             Dim row2 As DataRow
 
             If (bluetooth = "on") Then
-                Validabluetooth = 1
+                Validabluetooth = 1 ' tiene bluetooth
             Else
-                Validabluetooth = 0
+                Validabluetooth = 0 ' NO tiene Bluetooth
             End If
 
             Dim registro As SqlDataReader
