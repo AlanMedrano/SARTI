@@ -13,7 +13,7 @@ Public Class ModificarEquipo
             Dim puertos_usb, puertos_hdmi, puertos_vga, puertos_red, unidad_cd, tiempo_garantia As String
 
             Dim Query As String = "UPDATE Usuario SET "
-            Dim Datos = New String() {modelo, marca, fecha_compra, detalles, falla, num_factura, num_serie, procesador, ram, disco_duro, puertos_usb, puertos_hdmi, puertos_vga, puertos_red, unidad_cd, tiempo_garantia}
+            Dim Datos = New String() {Trim(modelo), Trim(marca), Trim(fecha_compra), Trim(detalles), Trim(falla), Trim(num_factura), Trim(num_serie), Trim(procesador), Trim(ram), Trim(disco_duro), Trim(puertos_usb), Trim(puertos_hdmi), Trim(puertos_vga), Trim(puertos_red), Trim(unidad_cd), Trim(tiempo_garantia)}
             Dim valores = New String() {"Modelo='", "Marca='", "FechaCompra='", "Detalles='", "Falla='", "Numfactura='", "N_Serie='", "procesador='", "ram='", "DiscoDuro='", "PuertoUSB=", "PuertoHDMI=", "PuertoVGA=", "PuertoRed=", "UnidadCD=", "TiempoGarantia="}
 
 
