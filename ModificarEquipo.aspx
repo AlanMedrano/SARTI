@@ -154,8 +154,19 @@
                  <b>Detalles: </b> <asp:Label ID="lbl_Detalles" runat="server" Text=""></asp:Label>
              </div>
          </div>
-
-             <b>Bluetooth: </b><asp:Label ID="lbl_bluetooth" runat="server" Text=""></asp:Label>
+             <div class="row">
+                 <div class="col-lg-6">
+                     <b>Bluetooth: </b><asp:Label ID="lbl_bluetooth" runat="server" Text=""></asp:Label>
+                 </div>
+                 <div class="col-lg-6"></div>
+             </div><br />
+             <div class="row">
+                 <div class="col-lg-6">
+                     <b>Estatus del equipo: </b><asp:Label ID="lbl_estatusEquipo" runat="server" Text=""></asp:Label>
+                 </div>
+                 <div class="col-lg-6"></div>
+             </div>
+             
              
              
              <br /><br />
@@ -271,10 +282,10 @@
                     <input name="discoduro" placeholder="500 GB" class="form-control"/>
                 </div>
 
-            </div>
+            </div><br />
                 <div class="row">
                     <div class="col-lg-3">
-                        <br />
+                        
                         <p>Bluetooth:</p>
                         <asp:DropDownList ID="inp_bluetooth" runat="server" CssClass="form-control">
                             <asp:ListItem Value=""></asp:ListItem>
@@ -282,7 +293,18 @@
                             <asp:ListItem Value="0">No</asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <asp:Panel id="Pnl_estatusEquipo" runat="server" Visible="false">
+                            <p>Estatus del equipo:</p>
+                            <asp:DropDownList ID="DDL_estatusEquipo" runat="server" CssClass="form-control">
+                                <asp:ListItem Value=""></asp:ListItem>
+                                <asp:ListItem Value="1">En Stock</asp:ListItem>
+                                <asp:ListItem Value="3">Dañada</asp:ListItem>
+                                <asp:ListItem Value="4">Trash</asp:ListItem>
+                            </asp:DropDownList>
+                        </asp:Panel>
+                        
+                    </div>
                     <div class="col-lg-5">
                         
                     </div>
