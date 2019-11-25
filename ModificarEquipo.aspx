@@ -178,18 +178,19 @@
                 <input class="form-control" name="modelo" placeholder="" type="text" >
                 
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                 <p>Marca</p>
                 <input class="form-control" name="marca" placeholder="" type="text" >
                 
                 </div>
 
+          <!--
                 <div class="col-lg-3">
                     <p>Tipo de equipo:</p>
                         <input class="form-control" name="TipoEquipo" placeholder="" readonly>
                 </div>
-               
-                <div class="col-lg-2">
+              --> 
+                <div class="col-lg-4">
                 <p>Fecha de compra</p>
                 <input class="form-control" name="feccompra" placeholder="" type="date">
                 
