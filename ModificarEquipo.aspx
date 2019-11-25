@@ -191,7 +191,7 @@
                
                 <div class="col-lg-2">
                 <p>Fecha de compra</p>
-                <input class="form-control" name="feccompra" placeholder="">
+                <input class="form-control" name="feccompra" placeholder="" type="date">
                 
                 </div>
             
