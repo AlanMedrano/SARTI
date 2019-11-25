@@ -44,10 +44,10 @@
             if (CD == '') {
                 CD = document.getElementById('cd').value = 0 ;
             }
-            if (TiempoGarantia == "" || TiempoGarantia < 1) {
-                alert('Asegurate de ingresar el campo "Tiempo de garantia" y que sea mayor a 0');
-                return false;
-            } else {
+            if (TiempoGarantia == '' ) {
+                TiempoGarantia = document.getElementById('TiempoGarantia').value = 0;
+                // return false;
+            } 
                 if (TipoDeEquipo < 1) {
                     alert('Por favor selecciona un valor valido en "Tipo de equipo"');
                     return false;
@@ -55,8 +55,7 @@
                 } else {
                     return true;
                 }
-               
-            }
+             
         }
 
     </script>
@@ -143,7 +142,7 @@
 
                 <div class="col-lg-3">
                     <p>Tipo de equipo:</p>
-                    <asp:DropDownList CssClass="form-control" name="TipoDeEquipo" ID="DDL_TipoDeEquipo" runat="server">
+                    <asp:DropDownList CssClass="form-control" name="TipoDeEquipo" ID="DDL_TipoDeEquipo" runat="server" required>
                         <asp:ListItem Enabled="True" Selected="True" Value="0">Selecciona Tipo de Equipo</asp:ListItem>
                     </asp:DropDownList>
                 </div>
@@ -167,6 +166,7 @@
                 <p>Falla</p>
             <textarea class="form-control" name="falla"></textarea><br>
                  <p>Num factura</p>
+                <asp:FileUpload ID="FUpload_Factura" runat="server"  />
             <input class="form-control" name="nfactura"   required><br>
                 <div class="custom-file">
   <input type="file" class="custom-file-input" id="Filefactura" name="Filefactura" accept="image/*" disabled>
@@ -247,6 +247,12 @@
   <strong><i class="fas fa-exclamation-triangle"></i> ¡Vaya al parecer algo paso!</strong> <asp:Label ID="lbl_error" runat="server" Text="Label"></asp:Label>
 </div> 
          </asp:Panel>
+        <asp:Panel ID="pnl_errorImg" runat="server" Visible="false">
+            <div class="alert alert-danger">
+                <strong><i class="fas fa-exclamation-triangle"></i> ¡Vaya al parecer algo salio mal! </strong> <asp:Label ID="lbl_error_img" Text="" runat="server"></asp:Label>
+            </div>  
+
+        </asp:Panel>
     <button class="btn btn-outline-primary btn-lg" type="submit" text="Registrar">Registrar equipo</button><br><br> <br>
    
                     </form>
