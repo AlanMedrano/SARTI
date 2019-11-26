@@ -168,7 +168,7 @@
                  <p>Num factura</p>
                 
                 <input class="form-control" name="nfactura"   required><br>
-                <footer class="blockquote-footer"><i class="fas fa-file-image"></i>  Carga la factura del equipo <cite title="Source Title">(formatos .JPG o .PNG).</cite></footer>
+                <footer class="blockquote-footer"><i class="fas fa-file-image"></i>  Carga la factura del equipo <cite title="Source Title">(formatos .JPG, .PNG o .PDF).</cite></footer>
                 <asp:FileUpload ID="FUpload_Factura" runat="server"  />
                 <!--
                 <div class="custom-file">
