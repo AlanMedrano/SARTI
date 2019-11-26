@@ -64,7 +64,7 @@ Public Class AgregarEquipo
 
                 ' OBTENEMOS EL TAMAÑO DEL ARCHIVO...
                 size = FUpload_Factura.PostedFile.ContentLength
-                If (ext = ".png" Or ext = ".jpg") Then
+                If (ext = ".png" Or ext = ".jpg" Or ext = ".pdf") Then
 
                     Try
                         FUpload_Factura.SaveAs(Server.MapPath("~/Facturas_Equipos/" & "FACTURA_" & NFactura & "NSerie_" & n_serie & ext))
@@ -121,20 +121,20 @@ Public Class AgregarEquipo
         cmd.Parameters.AddWithValue("@Procesador", procesador)
         cmd.Parameters.AddWithValue("@Factura", "") ' FileFactura PENDIENTE
 
-        'registro = cmd.ExecuteReader()
+        registro = cmd.ExecuteReader()
 
-        'If (registro.Read() = True) Then
-        '        If (registro("TIPO_MENSAJE") = "EXITO") Then
-        '            lbl_exito.Text = registro("MENSAJE")
-        '            Pnl_exito.Visible = True
-        '            pnl_error.Visible = False
+        If (registro.Read() = True) Then
+            If (registro("TIPO_MENSAJE") = "EXITO") Then
+                lbl_exito.Text = registro("MENSAJE")
+                Pnl_exito.Visible = True
+                pnl_error.Visible = False
 
-        '        ElseIf (registro("TIPO_MENSAJE") = "ERROR") Then
-        '            lbl_error.Text = registro("MENSAJE")
-        '            pnl_error.Visible = True
-        '            Pnl_exito.Visible = False
-        '        End If
-        '    End If
+            ElseIf (registro("TIPO_MENSAJE") = "ERROR") Then
+                lbl_error.Text = registro("MENSAJE")
+                pnl_error.Visible = True
+                Pnl_exito.Visible = False
+            End If
+        End If
         conn.Close()
     End Sub
 
