@@ -166,12 +166,16 @@
                 <p>Falla</p>
             <textarea class="form-control" name="falla"></textarea><br>
                  <p>Num factura</p>
+                
+                <input class="form-control" name="nfactura"   required><br>
+                <footer class="blockquote-footer"><i class="fas fa-file-image"></i>  Carga la factura del equipo <cite title="Source Title">(formatos .JPG o .PNG).</cite></footer>
                 <asp:FileUpload ID="FUpload_Factura" runat="server"  />
-            <input class="form-control" name="nfactura"   required><br>
+                <!--
                 <div class="custom-file">
-  <input type="file" class="custom-file-input" id="Filefactura" name="Filefactura" accept="image/*" disabled>
-  <label class="custom-file-label" for="customFile">Cargar factura</label>
-</div>
+                    <input type="file" class="custom-file-input" id="Filefactura" name="Filefactura" accept="image/*" disabled>
+                    <label class="custom-file-label" for="customFile">Cargar factura</label>
+                </div>
+                -->
                 </div>            
             </div>            
             <br>
