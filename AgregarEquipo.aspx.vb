@@ -77,7 +77,7 @@ Public Class AgregarEquipo
 
                 Else
                     ' DESPLEGAR PANEL DE ERROR DONDE DIGA QUE SOLO SE PERMITEN IMAGENES .PNG O .JPG
-                    lbl_error_img.Text = "Recuerda que solo se pueden subir imagenes de tipo .PNG y .JPG"
+                    lbl_error_img.Text = "Recuerda que solo se pueden subir imagenes de tipo .PNG, .JPG o archivos .PDF"
                     pnl_errorImg.Visible = True
                 End If
             Else
