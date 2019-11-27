@@ -80,6 +80,22 @@ Public Class ModificarUsuario
 
         End If
         cn.Close()
+        ' LLENAMOS LA TABLA CON LOS EQUIPOS QUE EL USUARIO TIENE ASIGNADO, EN CASO DE NO TENER SE IMPRIME MENSAJE.
+        Dim ds As New DataSet
+        Dim sqlDA As New SqlDataAdapter("GetEquiposByUser " & usuario.ToString, System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
+
+        ds.Tables.Add("Tabla")
+        sqlDA.Fill(ds.Tables("Tabla"))
+        If ds.Tables("Tabla").Rows.Count() > 0 Then
+            DGV_EquiposbyUser.DataSource = ds.Tables("Tabla")
+            DGV_EquiposbyUser.DataBind()
+            pnl_noEquipos.Visible = False
+        Else
+            pnl_noEquipos.Visible = True
+        End If
+
+
+
 
         If IsPostBack = False Then
 
