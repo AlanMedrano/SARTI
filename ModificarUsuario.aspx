@@ -91,6 +91,7 @@
   </div>
 </nav>
      <div class="container"><br/>
+         <form runat="server">
                     <div class="pb-2 mt-4 mb-2 border-bottom">
         <H2 class="texto">Empleado.</H2>
     </div><br />
@@ -126,7 +127,44 @@
              </div>
              <div class="col-lg-4"></div>
          </div>
-         
+         <br /><br />
+         <!-- EQUIPOS ASIGNADOS AL USUARIO... -->
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="texto">Equipos asignados activos.</h5><br /><br />
+              <div class="table-responsive texto">
+                  <asp:GridView CssClass="table table-striped table-bordered table-hover" ID="DGV_EquiposbyUser" runat="server" AutoGenerateColumns="False" EnableModelValidation="True">
+                      <Columns>
+                          <asp:BoundField HeaderText="Equipo" DataField="Modelo" >
+                          <HeaderStyle CssClass="texto" />
+                          </asp:BoundField>
+                          <asp:BoundField HeaderText="Num Serie" DataField="N_Serie" >
+                          <HeaderStyle CssClass="texto" />
+                          </asp:BoundField>
+                          <asp:BoundField HeaderText="Fecha de entrega" DataField="FechaEntrega" >                          
+                          <HeaderStyle CssClass="texto" />
+                          </asp:BoundField>
+                          <asp:HyperLinkField DataNavigateUrlFields="linkResponsiva" DataTextField="textoResponsiva" HeaderText="Carga Responsiva" >                          
+                          <HeaderStyle HorizontalAlign="Center" CssClass="texto" />
+                          <ItemStyle HorizontalAlign="Center" />
+                          </asp:HyperLinkField>
+                          <asp:BoundField HeaderText="Fecha de retorno" DataField="FechaRetorno" >
+                          <HeaderStyle CssClass="texto" />
+                          </asp:BoundField>
+                      </Columns>
+                  </asp:GridView>
+              </div>
+
+             <asp:Panel ID="pnl_noEquipos" runat="server" Visible="false">
+                 <div class="alert alert-info" role="alert">
+                    <i class="far fa-bookmark"></i> - El usuario no cuenta con equipos asignados activos.
+                 </div>
+             </asp:Panel>
+          </div> <!--FIN card-body -->
+        </div> <br /><br />
+
+
          <br /><br />
 
           <asp:Panel ID="pnl_mensaje" runat="server" Visible="false">
@@ -142,10 +180,9 @@
          </asp:Panel>
 
     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Actualizar información
-  </button><br /><br />
+    Actualizar información</button><br /><br />
 
-         <form runat="server">
+         
 
          <div class="collapse" id="collapseExample">
   <div class="card card-body">
@@ -217,6 +254,6 @@
              </div><br /><br />
          </form>
 
-    </div>
+    </div> <!--FIN container -->
 </body>
 </html>
