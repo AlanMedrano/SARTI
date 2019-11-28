@@ -15,6 +15,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <title>Vigia | SARTI</title>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -31,13 +32,35 @@
         <form runat="server">        
             <div class="pb-2 mt-4 mb-2 border-bottom">
                 <H2 class="texto">Carga de responsiva</H2>
-            </div><br /><br />
+            </div><br />
+            <div class="texto">
+                <b>Equipo: </b><asp:Label ID="lbl_equipo" runat="server" Text=""></asp:Label><br />
+                <b>Usuario: </b><asp:Label ID="lbl_usuario" runat="server" Text=""></asp:Label>                                
+            </div><br /><br />            
              <div class="row">
-                 <div class="offset-lg-4 col-lg-4 offset-md-4 col-md-4">
-                     <asp:FileUpload ID="fU_Responsiva" runat="server" />
+                 <div class="offset-lg-4 col-lg-4 offset-md-4 col-md-4">                     
+                     <asp:FileUpload ID="fU_Responsiva" runat="server" required />
+                     <footer class="blockquote-footer"><i class="fas fa-file-image"></i>  Carga la responsiva del equipo <cite title="Source Title">(formatos .JPG, .PNG o .PDF).</cite></footer>
                  </div>
                  <div class="col-lg-4"></div>
-             </div>
+             </div><br /><br />
+            <div class="row text-center">
+                <div class="offset-lg-4 col-lg-4 offset-md-4 col-md-4">
+                    <button type="submit" class="btn btn-outline-success"><i class='far fa-paper-plane'></i> Enviar Responsiva</button>                                        
+                </div>
+
+            </div><br /><br />
+            <div class="row">
+                <div class="offset-lg-2 col-lg-8 offset-md-2 col-md-8">
+                    <asp:Panel ID="pnl_ErrorCarga" runat="server" Visible="false">
+                        <div class="alert alert-warning" role="alert">
+                            <asp:Label ID="lbl_MensajeError" runat="server" Text=""></asp:Label> 
+                        </div>
+                    </asp:Panel>
+                </div>
+                
+            </div>
+            
         </form>
     </div>
 </body>
