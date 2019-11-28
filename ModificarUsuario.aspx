@@ -165,8 +165,6 @@
         </div> <br /><br />
 
 
-         <br /><br />
-
           <asp:Panel ID="pnl_mensaje" runat="server" Visible="false">
               <div class="alert alert-success" role="alert">
                 El usuario se modificado exitosamente.
