@@ -6,7 +6,7 @@
             Response.Redirect("Default.aspx")
         End If
 
-        Dim equipo, nSerie, user, extencion As String
+        Dim equipo, nSerie, user, extension As String
 
         equipo = Page.Request.QueryString("Equipo")
         nSerie = Page.Request.QueryString("nSerie")
@@ -18,11 +18,11 @@
         If (IsPostBack) Then
             userReturn = lbl_usuario.Text
             If (fU_Responsiva.HasFile) Then
-                extencion = System.IO.Path.GetExtension(fU_Responsiva.FileName).ToLower
+                extension = System.IO.Path.GetExtension(fU_Responsiva.FileName).ToLower
                 ' VALIDAMOS QUE EL ARCHIVO CARGADO SEA DE TIPO '.pdf - .jpg - .pdf '
-                If (extencion = ".png" Or extencion = ".jpg" Or extencion = ".pdf") Then
+                If (extension = ".png" Or extension = ".jpg" Or extension = ".pdf") Then
                     Try
-                        fU_Responsiva.SaveAs(Server.MapPath("~/Responsivas_Equipos/" & "RESPONSIVA_nSerie_" & nSerie & "user_" & user & "Equipo_" & equipo & extencion))
+                        fU_Responsiva.SaveAs(Server.MapPath("~/Responsivas_Equipos/" & "RESPONSIVA_nSerie_" & nSerie & "user_" & user & "Equipo_" & equipo & extension))
                         Response.Redirect("ModificarUsuario.aspx?empleado=" & userReturn)
                     Catch ex As Exception
                         lbl_MensajeError.Text = "<strong> <i class='fas fa-unlink'></i> ¡Vaya! </strong> - Al parecer hubo un problema al llegar al servidor, por favor intentalo mas tarde."
