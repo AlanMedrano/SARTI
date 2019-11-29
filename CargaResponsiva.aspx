@@ -46,7 +46,7 @@
              </div><br /><br />
             <div class="row text-center">
                 <div class="offset-lg-4 col-lg-4 offset-md-4 col-md-4">
-                    <button type="submit" class="btn btn-outline-success"><i class='far fa-paper-plane'></i> Enviar Responsiva</button>                                        
+                    <button id="btn_sendResponsiva" type="submit" class="btn btn-outline-success"><i class='far fa-paper-plane'></i> Enviar Responsiva</button>                                        
                 </div>
 
             </div><br /><br />
