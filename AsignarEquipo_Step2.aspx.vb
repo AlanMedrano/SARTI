@@ -10,7 +10,7 @@ Public Class AsignarEquipo_Step2
         Dim usuario As Integer = Page.Request.QueryString("User")
         Dim ds As New DataSet
         Dim dt As New DataTable
-        Dim Query As String = "select 'AsignarEquipo_Step3.aspx?User=" & usuario & "&Equipo=' + convert(varchar(20),IdEquipo) as link, Modelo, Marca, Tipo_Equipo.Definicion, N_Serie from Equipo inner join Tipo_Equipo on equipo.IdTipoEquipo = Tipo_Equipo.IDTipoEquipo where IdEstatus = 1"
+        Dim Query As String = "select 'AsignarEquipo_Step3.aspx?User=" & usuario & "&Equipo=' + convert(varchar(20),IdEquipo) as link, Modelo, Marca, Tipo_Equipo.Definicion, N_Serie from Equipo inner join Tipo_Equipo on equipo.IdTipoEquipo = Tipo_Equipo.IDTipoEquipo where IdEstatus = 1 ORDER BY Modelo"
         Dim da As New SqlDataAdapter(Query, System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
 
         ds.Tables.Add("Tabla")
