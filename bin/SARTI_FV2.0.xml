@@ -46,6 +46,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.AgregarEquipo._FUpload_Factura">
+<summary>
+Control FUpload_Factura.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.AgregarEquipo._Pnl_exito">
 <summary>
 Control Pnl_exito.
@@ -76,6 +85,24 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.AgregarEquipo._lbl_error">
 <summary>
 Control lbl_error.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.AgregarEquipo._pnl_errorImg">
+<summary>
+Control pnl_errorImg.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.AgregarEquipo._lbl_error_img">
+<summary>
+Control lbl_error_img.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -247,6 +274,60 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.AsignarEquipo_Step3._lbl_error">
 <summary>
 Control lbl_error.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.CargaResponsiva._lbl_equipo">
+<summary>
+Control lbl_equipo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.CargaResponsiva._lbl_usuario">
+<summary>
+Control lbl_usuario.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.CargaResponsiva._pnl_LoadFile">
+<summary>
+Control pnl_LoadFile.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.CargaResponsiva._fU_Responsiva">
+<summary>
+Control fU_Responsiva.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.CargaResponsiva._pnl_ErrorCarga">
+<summary>
+Control pnl_ErrorCarga.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.CargaResponsiva._lbl_MensajeError">
+<summary>
+Control lbl_MensajeError.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -577,6 +658,60 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._lbl_bluetooth">
+<summary>
+Control lbl_bluetooth.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._lbl_estatusEquipo">
+<summary>
+Control lbl_estatusEquipo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._pnl_mensaje">
+<summary>
+Control pnl_mensaje.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._inp_bluetooth">
+<summary>
+Control inp_bluetooth.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._Pnl_estatusEquipo">
+<summary>
+Control Pnl_estatusEquipo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._DDL_estatusEquipo">
+<summary>
+Control DDL_estatusEquipo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.ModificarUsuario._lbl_nombre">
 <summary>
 Control lbl_nombre.
@@ -643,6 +778,24 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.ModificarUsuario._lbl_Estatus">
 <summary>
 Control lbl_Estatus.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarUsuario._DGV_EquiposbyUser">
+<summary>
+Control DGV_EquiposbyUser.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarUsuario._pnl_noEquipos">
+<summary>
+Control pnl_noEquipos.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -820,6 +973,42 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.Reporteador._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.Reporteador._ddl_consulta">
+<summary>
+Control ddl_consulta.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.Reporteador._DGV_EquiposAsignados">
+<summary>
+Control DGV_EquiposAsignados.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.Reporteador._DS_EquiposAsignados">
+<summary>
+Control DS_EquiposAsignados.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.ReporteDeEquipos._pnl_equipos">
 <summary>
 Control pnl_equipos.
@@ -839,6 +1028,33 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </remarks>
 </member>
 <member name="F:SARTI_FV2._0.ReporteDeEquipos._pnl_NoEquipos">
+<summary>
+Control pnl_NoEquipos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ReporteDeReemplazos._pnl_equipos">
+<summary>
+Control pnl_equipos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ReporteDeReemplazos._dgv_equiposRemplazo">
+<summary>
+Control dgv_equiposRemplazo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ReporteDeReemplazos._pnl_NoEquipos">
 <summary>
 Control pnl_NoEquipos.
 </summary>
