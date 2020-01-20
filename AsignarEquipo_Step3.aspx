@@ -177,10 +177,10 @@
 
 <ol>
   <li>El usuario que se describe en este formato es el responsable absoluto y directo de los daños que se le ocasionen a el equipo y/o material que se le entrega</li>
-  <li>En caso de extravio, daños, mal trato y mal uso del equipo y/o material que se entrega, el Dpto. de RH tendra la libertad de tomar las medidas necesarias que apliquen.</li>
-  <li>El equipo y/o material son para uso exclusivo de Grupo Vigia y se deben de utilizar como beneficio para la empresa.</li>
+  <li>En caso de extravio, daños, mal trato y mal uso del equipo y/o material que se entrega, el Dpto. de RH aplicara el reglamento correspondiente.</li>
+  <li>El equipo y/o material son para uso exclusivo de empresas grupo Vigia y se debe de utilizar como herramienta de trabajo.</li>
   <li>El Departamento de Sistemas tendra la libertad de retirar el equipo y/o material en caso de que se le este dando mal uso y se le reportara con su jefe directo.</li>  
-    <li>La firma de conformidad da pie de aceptacion a estas politicas.</li>
+  <li>El empleado firma de conformidad de las políticas anteriores.</li>
 </ol>       <br /><br /><br /><br /><br />   
             <div class="row texto">
                  <div class="col-lg-6">
