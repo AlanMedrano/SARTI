@@ -7,12 +7,21 @@ Public Class ReporteDeReemplazos
             Response.Redirect("Default.aspx")
         End If
 
+        Dim ds As New DataSet
+        Dim dt As New DataTable
+        Dim da As New SqlDataAdapter("exec GetReporteEquiposVencidos", System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
 
-
-
-
-
-
+        ds.Tables.Add("Tabla")
+        da.Fill(ds.Tables("Tabla"))
+        If ds.Tables("Tabla").Rows.Count() > 0 Then
+            dgv_equiposRemplazo.DataSource = ds.Tables("Tabla")
+            dgv_equiposRemplazo.DataBind()
+            pnl_equipos.Visible = True
+            pnl_NoEquipos.Visible = False
+        Else
+            pnl_equipos.Visible = False
+            pnl_NoEquipos.Visible = True
+        End If
 
 
 
@@ -52,22 +61,6 @@ Public Class ReporteDeReemplazos
         '    pnl_mensaje.Visible = True
         '    pnl_equipos.Visible = False
         'End If
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     End Sub
 
