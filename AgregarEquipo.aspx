@@ -158,7 +158,7 @@
             <div class="row">
             
             <div class="col-lg-6">
-                <p>Detalles</p>
+                <p>Observaciones</p>
             <textarea class="form-control" rows="9" name="detalles"></textarea>
                 
                 </div>
