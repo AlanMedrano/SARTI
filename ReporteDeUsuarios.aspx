@@ -72,6 +72,9 @@
           <a class="dropdown-item" href="ReporteDeUsuarios.aspx">Empleados</a>
         </div>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="InformacionAdicional.aspx">Información adicional</a>
+      </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Equipo
@@ -82,9 +85,6 @@
           <a class="dropdown-item" href="ReporteDeEquipos.aspx">Equipos</a> 
         </div>
       </li>  
-         <li class="nav-item">
-        <a class="nav-link" href="InformacionAdicional.aspx">Información adicional</a>
-      </li>
          <li class="nav-item">
         <a class="nav-link" href="AsignarEquipo_Step1.aspx">Asignar equipo   </a>
       </li>
