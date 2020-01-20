@@ -128,7 +128,7 @@
             <input class="form-control" placeholder="" name="nombre" type="text" required>
                 </div>
                 <div class="col-lg-4">
-                <p>Correo:</p>
+                <p>Correo <small class="text-muted">ingresar solo minusculas</small></p>
             <input class="form-control" type="email" name="correo" required>
                 </div>
                 <div class="col-lg-4">
