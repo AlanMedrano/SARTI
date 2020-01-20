@@ -86,6 +86,24 @@ Partial Public Class ModificarUsuario
     Protected WithEvents lbl_Estatus As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control DGV_EquiposbyUser.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DGV_EquiposbyUser As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control pnl_noEquipos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnl_noEquipos As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''Control pnl_mensaje.
     '''</summary>
     '''<remarks>

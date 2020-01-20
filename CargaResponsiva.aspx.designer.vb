@@ -11,77 +11,59 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class AgregarEquipo
+Partial Public Class CargaResponsiva
     
     '''<summary>
-    '''Control DDL_TipoDeEquipo.
+    '''Control lbl_equipo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DDL_TipoDeEquipo As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents lbl_equipo As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control FUpload_Factura.
+    '''Control lbl_usuario.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents FUpload_Factura As Global.System.Web.UI.WebControls.FileUpload
+    Protected WithEvents lbl_usuario As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control Pnl_exito.
+    '''Control pnl_LoadFile.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Pnl_exito As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents pnl_LoadFile As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''Control lbl_exito.
+    '''Control fU_Responsiva.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lbl_exito As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents fU_Responsiva As Global.System.Web.UI.WebControls.FileUpload
     
     '''<summary>
-    '''Control pnl_error.
+    '''Control pnl_ErrorCarga.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents pnl_error As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents pnl_ErrorCarga As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''Control lbl_error.
+    '''Control lbl_MensajeError.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lbl_error As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control pnl_errorImg.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents pnl_errorImg As Global.System.Web.UI.WebControls.Panel
-    
-    '''<summary>
-    '''Control lbl_error_img.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lbl_error_img As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lbl_MensajeError As Global.System.Web.UI.WebControls.Label
 End Class

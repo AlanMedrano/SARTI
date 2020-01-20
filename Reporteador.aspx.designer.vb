@@ -11,77 +11,77 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class AgregarEquipo
+Partial Public Class Reporteador
     
     '''<summary>
-    '''Control DDL_TipoDeEquipo.
+    '''Control form1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DDL_TipoDeEquipo As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
-    '''Control FUpload_Factura.
+    '''Control ddl_consulta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents FUpload_Factura As Global.System.Web.UI.WebControls.FileUpload
+    Protected WithEvents ddl_consulta As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''Control Pnl_exito.
+    '''Control DGV_EquiposAsignados.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Pnl_exito As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents DGV_EquiposAsignados As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
-    '''Control lbl_exito.
+    '''Control DS_EquiposAsignados.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lbl_exito As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents DS_EquiposAsignados As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
-    '''Control pnl_error.
+    '''Control DS_EquiposNOAsignados.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents pnl_error As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents DS_EquiposNOAsignados As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
-    '''Control lbl_error.
+    '''Control DS_EquiposDañados.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lbl_error As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents DS_EquiposDañados As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
-    '''Control pnl_errorImg.
+    '''Control DS_EquiposTrash.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents pnl_errorImg As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents DS_EquiposTrash As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
-    '''Control lbl_error_img.
+    '''Control DS_TotalEquipos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lbl_error_img As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents DS_TotalEquipos As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

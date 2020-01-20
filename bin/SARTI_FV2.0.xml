@@ -1009,6 +1009,42 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.Reporteador._DS_EquiposNOAsignados">
+<summary>
+Control DS_EquiposNOAsignados.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.Reporteador._DS_EquiposDañados">
+<summary>
+Control DS_EquiposDañados.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.Reporteador._DS_EquiposTrash">
+<summary>
+Control DS_EquiposTrash.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.Reporteador._DS_TotalEquipos">
+<summary>
+Control DS_TotalEquipos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.ReporteDeEquipos._pnl_equipos">
 <summary>
 Control pnl_equipos.

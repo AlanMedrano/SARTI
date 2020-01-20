@@ -165,4 +165,58 @@ Partial Public Class ModificarEquipo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lbl_Detalles As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_bluetooth.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_bluetooth As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lbl_estatusEquipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbl_estatusEquipo As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control pnl_mensaje.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnl_mensaje As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''Control inp_bluetooth.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents inp_bluetooth As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control Pnl_estatusEquipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Pnl_estatusEquipo As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''Control DDL_estatusEquipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DDL_estatusEquipo As Global.System.Web.UI.WebControls.DropDownList
 End Class
