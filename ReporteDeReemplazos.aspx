@@ -17,6 +17,8 @@
     <title>Vigia | SARTI</title>
 </head>
 <body>
+
+    <form runat="server" >
                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="Inicio.aspx">Grupo Vigia | SARTI</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,6 +48,9 @@
           <a class="dropdown-item" href="ReporteDeUsuarios.aspx">Empleados</a>
         </div>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="InformacionAdicional.aspx">Información adicional</a>
+      </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Equipo
@@ -56,9 +61,6 @@
           <a class="dropdown-item" href="ReporteDeEquipos.aspx">Equipos</a> 
         </div>
       </li>  
-         <li class="nav-item">
-        <a class="nav-link" href="InformacionAdicional.aspx">Información adicional</a>
-      </li>
          <li class="nav-item">
         <a class="nav-link" href="AsignarEquipo_Step1.aspx">Asignar equipo   </a>
       </li>
@@ -84,44 +86,59 @@
         <H2 class="texto">Reporte de equipos con fecha de uso vencida. </H2>
     </div>
            <br><br><br>
-           
-                   <table class="table table-striped">
-    <thead>
-      <tr class="texto">
-               
-        <th>Modelo</th>
-        <th>Marca</th>  
-        <th>Tipo de equipo</th>
-          <th>Tiempo de uso</th>
-          <th>Usuario relacionado</th>
-          <th>Tipo de usuario</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-       
-        <td>Dell AlienWare</td>
-        <td>Dell</td>
-        <td>Laptop</td>
-          <td>3 años y 23 dias</td>
-          <td>alan.medrano@vigia.com.mx</td>
-          <td>Gerente de TI</td>
-      </tr>  
-          <tr>
-        <td>Inspiron</td>
-        <td>HP</td>
-        <td>Laptop</td>
-          <td>4 años</td>
-          <td>N/A</td>
-          <td>N/A</td>
-      </tr> 
-    </tbody>
-  </table>  <br><br>
+          
+            <asp:Panel ID="pnl_equipos" runat="server" Visible="false">
+                <div class="table-responsive texto">
+                <asp:GridView ID="dgv_equiposRemplazo" runat="server" EnableModelValidation="True" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField HeaderText="Modelo" DataField="modelo" />
+                        <asp:BoundField HeaderText="Marca" DataField="marca" />
+                        <asp:BoundField HeaderText="Tiempo Garantia" DataField="TiempoGarantia" />
+                        <asp:BoundField HeaderText="N° Serie" DataField="N_Serie" />
+                        <asp:BoundField HeaderText="Tipo equipo" DataField="TipoEquipo" />
+                        <asp:BoundField HeaderText="Usuario Rel" DataField="Correo" />
+                        <asp:BoundField HeaderText="Fecha compra" DataField="FechaCompra" />
+                        <asp:BoundField HeaderText="Tiempo uso" DataField="TiempoUso" />
+                    </Columns>
+                </asp:GridView>
+                </div>
+            </asp:Panel>
+
+            <asp:Panel ID="pnl_NoEquipos" runat="server" Visible="false">
+                <div class="alert alert-primary" role="alert">
+                    Al parecer no hay equipos con tiempo de uso vencido.
+                </div>
+            </asp:Panel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <br><br>
         <div class="alert alert-primary" role="alert">
             Este reporte es solo un area informativa,
   recuerda dar de baja cada equipo que se haya rotado.
 </div>  
             
     </div>
+   </form>
 </body>
 </html>
