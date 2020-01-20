@@ -81,7 +81,9 @@
 </nav>
         <div class="container"><br>
                              <div class="pb-2 mt-4 mb-2 border-bottom">
-        <H2 class="texto">Selecciona el equipo:</H2>
+        <H2 class="texto">Selecciona el equipo
+            <small class="text-muted">(Equipos en stock)</small>
+        </H2>
     </div>
            <br><br><br>
            <form method="get" action="AsignarEquipo_Step2.aspx" runat="server">
