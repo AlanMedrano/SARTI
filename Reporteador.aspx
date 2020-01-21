@@ -82,7 +82,7 @@
         </nav>
         <div class="container"><br />
             <div class="pb-2 mt-4 mb-2 border-bottom">
-                <H2 class="texto">Reporteador de equipos.</H2>
+                <H2 class="texto">Reporteador de equipos. <small class="text-muted">(<asp:Label ID="lbl_reporte" runat="server" Text="Equipos asignados"></asp:Label>)</small></H2>
             </div>
             <div id="divConsulta">
                 <br />

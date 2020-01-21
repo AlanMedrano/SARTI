@@ -991,6 +991,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.Reporteador._lbl_reporte">
+<summary>
+Control lbl_reporte.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.Reporteador._ddl_consulta">
 <summary>
 Control ddl_consulta.
