@@ -88,6 +88,8 @@
           <a class="dropdown-item" href="AgregarEquipo.aspx">Registar equipo</a>
           <div class="dropdown-divider"></div>       
           <a class="dropdown-item" href="ReporteDeEquipos.aspx">Equipos</a> 
+          <div class="dropdown-divider"></div>       
+          <a class="dropdown-item" href="Reporteador.aspx">Reportes</a> 
         </div>
       </li>  
          <li class="nav-item">
@@ -98,7 +100,7 @@
       </li>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <li class"nav-item">
-            <a class="btn btn-primary" href="ReporteDeReemplazos.aspx" role="button">Equipos a reemplazo <span class="badge badge-light">4</span></a>
+            <a class="btn btn-primary" href="ReporteDeReemplazos.aspx" role="button">Equipos a reemplazo </a>
         </li>
         
        
