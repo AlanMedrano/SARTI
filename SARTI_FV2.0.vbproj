@@ -51,7 +51,10 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Facturas_Equipos\" />
+    <Folder Include="Responsivas_Equipos\" />
+  </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
@@ -88,6 +91,7 @@
     <Content Include="Bootstrap\JS\bootstrap.bundle.min.js" />
     <Content Include="Bootstrap\JS\bootstrap.js" />
     <Content Include="Bootstrap\JS\bootstrap.min.js" />
+    <Content Include="CargaResponsiva.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DesenlazarEquipo.aspx" />
     <Content Include="DesenlazarEquipostep2.aspx" />
@@ -103,11 +107,13 @@
     <Content Include="Plantilla.aspx" />
     <Content Include="RegistrarAdministrador.aspx" />
     <Content Include="RegistrarUsuario.aspx" />
+    <Content Include="Reporteador.aspx" />
     <Content Include="ReporteDeEquipos.aspx" />
     <Content Include="ReporteDeReemplazos.aspx" />
     <Content Include="ReporteDeUsuarios.aspx" />
     <Content Include="Resources\Icons.css" />
     <Content Include="Resources\lock.png" />
+    <Content Include="Resources\LogoVigia_2.png" />
     <Content Include="Resources\VigiaLogo.png" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -138,6 +144,13 @@
     </Compile>
     <Compile Include="AsignarEquipo_Step3.aspx.vb">
       <DependentUpon>AsignarEquipo_Step3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CargaResponsiva.aspx.designer.vb">
+      <DependentUpon>CargaResponsiva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargaResponsiva.aspx.vb">
+      <DependentUpon>CargaResponsiva.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
@@ -248,6 +261,13 @@
     </Compile>
     <Compile Include="RegistrarUsuario.aspx.vb">
       <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reporteador.aspx.designer.vb">
+      <DependentUpon>Reporteador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteador.aspx.vb">
+      <DependentUpon>Reporteador.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ReporteDeEquipos.aspx.designer.vb">
