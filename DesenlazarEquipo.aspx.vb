@@ -9,7 +9,7 @@ Public Class DesenlazarEquipo
 
         Dim ds As New DataSet
         Dim dt As New DataTable
-        Dim da As New SqlDataAdapter("Select 'DesenlazarEquipostep2.aspx?user=' + CONVERT(varchar(20), u.IdUsuario) as Link, u.Nombre as Empleado, u.Correo from Dominio_Equipo as DE LEFT JOIN Usuario U ON U.IdUsuario = DE.IdUsuario", System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
+        Dim da As New SqlDataAdapter("Select distinct 'DesenlazarEquipostep2.aspx?user=' + CONVERT(varchar(20), u.IdUsuario) as Link, u.Nombre as Empleado, u.Correo from Dominio_Equipo as DE LEFT JOIN Usuario U ON U.IdUsuario = DE.IdUsuario order by u.Nombre", System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
 
         ds.Tables.Add("Tabla")
         da.Fill(ds.Tables("Tabla"))
