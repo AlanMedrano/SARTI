@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -22,6 +23,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>3.4</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Facturas_Equipos\" />
+    <Folder Include="LibreryDescargaExcel\TableExport\docs\" />
     <Folder Include="Responsivas_Equipos\" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +96,7 @@
     <Content Include="Bootstrap\JS\bootstrap.min.js" />
     <Content Include="CargaResponsiva.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DescargaReporte.aspx" />
     <Content Include="DesenlazarEquipo.aspx" />
     <Content Include="DesenlazarEquipostep2.aspx" />
     <Content Include="DetalleUserAdmin.aspx" />
@@ -101,6 +105,175 @@
     <Content Include="Funciones_SARTI.js" />
     <Content Include="InformacionAdicional.aspx" />
     <Content Include="Inicio.aspx" />
+    <Content Include="LibreryDescargaExcel\Blob.js-master\.gitignore" />
+    <Content Include="LibreryDescargaExcel\Blob.js-master\Blob.js" />
+    <Content Include="LibreryDescargaExcel\Blob.js-master\Blob.min.js" />
+    <Content Include="LibreryDescargaExcel\FileSaver\.gitignore" />
+    <Content Include="LibreryDescargaExcel\FileSaver\demo\demo.css" />
+    <Content Include="LibreryDescargaExcel\FileSaver\demo\demo.js" />
+    <Content Include="LibreryDescargaExcel\FileSaver\demo\demo.min.js" />
+    <Content Include="LibreryDescargaExcel\FileSaver\FileSaver.js" />
+    <Content Include="LibreryDescargaExcel\FileSaver\FileSaver.min.js" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\.gitignore" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\cpexcel.js" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\jszip.js" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\ods.js" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\xls.core.js" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\xls.core.min.js" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\xls.js" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\xlsx.core.js" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\xlsx.core.min.js" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\xlsx.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\.gitignore" />
+    <Content Include="LibreryDescargaExcel\TableExport\.gitmodules" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\css\tableexport.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\css\tableexport.min.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\img\csv.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\img\icsv.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\img\itxt.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\img\ixls.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\img\ixlsx.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\img\txt.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\img\xls.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\img\xlsx.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\js\tableexport.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\dist\js\tableexport.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\arabic-language.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\bootstrap.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\cell-data-types.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\defaults.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\examples.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\exportButtons.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\filename.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\formats-xlsx-xls-csv-txt.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\headers_footers.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\ignore-row-cols-cells.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\position.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\right-to-left.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\rowspan-colspan.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\sheetname.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\unicode-emoji.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\update_reset_remove.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\whitespace.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\gulpfile.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\Hero.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\LICENSE.txt" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\css\tableexport.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\css\tableexport.min.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\img\csv.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\img\icsv.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\img\itxt.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\img\ixls.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\img\ixlsx.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\img\txt.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\img\xls.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\img\xlsx.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\js\tableexport.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\stable\js\tableexport.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\css\table2csv.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\index.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\js\Blob.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\js\FileSaver.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\js\jquery-1.11.2.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\js\jquery.table2csv.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\js\jquery.table2csv.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\js\table2excel.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\js\xlsx.core.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\css\bootstrap-theme.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\css\bootstrap-theme.min.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\css\bootstrap.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\css\bootstrap.min.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\css\font-awesome.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\css\font-awesome.min.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\css\tableexport.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\fontawesome-webfont.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\img\background.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\img\icsv.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\img\itxt.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\img\ixls.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\img\Xls_file_format_symbol_16 %281%29.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\index.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\Blob.js\Blob.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\bootstrap-autohidingnavbar\jquery.bootstrap-autohidingnavbar.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\bootstrap-autohidingnavbar\jquery.bootstrap-autohidingnavbar.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\Bootstrap\bootstrap.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\Bootstrap\bootstrap.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\Export2Excel.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\FileSaver.js\FileSaver.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\jquery-1.11.3.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\js-xlsx\xlsx.core.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\main.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\npm.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\TableExport.js\jquery.tableexport.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\TableExport.js\jquery.tableexport.v2.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\ZeroClipboard\ZeroClipboard.Core.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\ZeroClipboard\ZeroClipboard.Core.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\ZeroClipboard\ZeroClipboard.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\ZeroClipboard\ZeroClipboard.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\ZeroClipboard\ZeroClipboard.swf" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\bootstrap-theme.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\bootstrap-theme.min.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\bootstrap.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\bootstrap.min.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\font-awesome.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\font-awesome.min.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\highlight-themes\atelier-estuary.dark.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\highlight-themes\default.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\highlight-themes\github-gist.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\highlight-themes\github.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\highlight-themes\googlecode.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\highlight-themes\idea.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\highlight-themes\xcode.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\highlight-themes\zenburn.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\tableexport.css" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\fontawesome-webfont.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\img\background.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\img\icsv.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\img\itxt.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\img\ixls.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\img\Xls_file_format_symbol_16 %281%29.png" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\index.html" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\Blob.js\Blob.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\bootstrap-autohidingnavbar\jquery.bootstrap-autohidingnavbar.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\bootstrap-autohidingnavbar\jquery.bootstrap-autohidingnavbar.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\bootstrap.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\bootstrap.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\Bootstrap\bootstrap.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\Bootstrap\bootstrap.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\Export2Excel.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\FileSaver.js\FileSaver.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\highlight.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\jquery-1.11.3.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\jquery.tableexport.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\js-xlsx\xlsx.core.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\main.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\npm.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\autohidingnavbar\jquery.bootstrap-autohidingnavbar.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\autohidingnavbar\jquery.bootstrap-autohidingnavbar.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\Blob.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\Export2Excel.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\FileSaver.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\ToggleAttr.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\xlsx.core.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\ZeroClipboard\ZeroClipboard.Core.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\ZeroClipboard\ZeroClipboard.Core.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\ZeroClipboard\ZeroClipboard.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\ZeroClipboard\ZeroClipboard.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\ZeroClipboard\ZeroClipboard.swf" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\TableExport.js\jquery.tableexport.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\TableExport.js\jquery.tableexport.v2.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\ZeroClipboard\ZeroClipboard.Core.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\ZeroClipboard\ZeroClipboard.Core.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\ZeroClipboard\ZeroClipboard.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\ZeroClipboard\ZeroClipboard.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\ZeroClipboard\ZeroClipboard.swf" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v2\v2.0\tableexport-2.0.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v2\v2.0\tableexport-2.0.min.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v2\v2.1\Export2Excel.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v2\v2.1\tableexport-2.1.js" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v2\v2.1\tableexport-2.1.min.js" />
     <Content Include="ModificarAdmin.aspx" />
     <Content Include="ModificarEquipo.aspx" />
     <Content Include="ModificarUsuario.aspx" />
@@ -115,6 +288,73 @@
     <Content Include="Resources\lock.png" />
     <Content Include="Resources\LogoVigia_2.png" />
     <Content Include="Resources\VigiaLogo.png" />
+    <Content Include="LibreryDescargaExcel\FileSaver\bower.json" />
+    <Content Include="LibreryDescargaExcel\FileSaver\LICENSE.md" />
+    <Content Include="LibreryDescargaExcel\FileSaver\package.json" />
+    <Content Include="LibreryDescargaExcel\FileSaver\README.md" />
+    <Content Include="LibreryDescargaExcel\TableExport\.github\ISSUE_TEMPLATE\bug_report.md" />
+    <Content Include="LibreryDescargaExcel\TableExport\.github\ISSUE_TEMPLATE\feature_request.md" />
+    <Content Include="LibreryDescargaExcel\TableExport\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="LibreryDescargaExcel\TableExport\examples\examples.less" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.0\table2csv.zip" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\css\bootstrap-theme.css.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\css\bootstrap.css.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\fontawesome-webfont.eot" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\fontawesome-webfont.ttf" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\fontawesome-webfont.woff" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\fontawesome-webfont.woff2" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\FontAwesome.otf" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\ZeroClipboard\ZeroClipboard.Core.min.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.1\js\ZeroClipboard\ZeroClipboard.min.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\bootstrap-theme.css.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\css\bootstrap.css.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\fontawesome-webfont.eot" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\fontawesome-webfont.ttf" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\fontawesome-webfont.woff" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\fontawesome-webfont.woff2" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\FontAwesome.otf" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\ZeroClipboard\ZeroClipboard.Core.min.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\plugins\ZeroClipboard\ZeroClipboard.min.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\ZeroClipboard\ZeroClipboard.Core.min.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\src\v1\v1.2\js\ZeroClipboard\ZeroClipboard.min.map" />
+    <Content Include="LibreryDescargaExcel\TableExport\.npmrc" />
+    <Content Include="LibreryDescargaExcel\TableExport\.nvmrc" />
+    <Content Include="LibreryDescargaExcel\TableExport\.prettierignore" />
+    <Content Include="LibreryDescargaExcel\TableExport\.prettierrc" />
+    <Content Include="LibreryDescargaExcel\TableExport\.travis.yml" />
+    <Content Include="LibreryDescargaExcel\TableExport\bower.json" />
+    <Content Include="LibreryDescargaExcel\TableExport\CODE_OF_CONDUCT.md" />
+    <Content Include="LibreryDescargaExcel\TableExport\MIGRATING_v3_to_v4.md" />
+    <Content Include="LibreryDescargaExcel\TableExport\MIGRATING_v4_to_v5.md" />
+    <Content Include="LibreryDescargaExcel\TableExport\package.json" />
+    <Content Include="LibreryDescargaExcel\TableExport\publish.sh" />
+    <Content Include="LibreryDescargaExcel\TableExport\README.md" />
+    <Content Include="LibreryDescargaExcel\TableExport\SUMMARY.md" />
+    <Content Include="LibreryDescargaExcel\TableExport\typings.json" />
+    <Content Include="LibreryDescargaExcel\TableExport\yarn.lock" />
+    <Content Include="LibreryDescargaExcel\FileSaver\demo\index.xhtml" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\bower.json" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\bump.sh" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\package.json" />
+    <Content Include="LibreryDescargaExcel\js-xlsx-master\README.md" />
+    <Content Include="LibreryDescargaExcel\Blob.js-master\bower.json" />
+    <Content Include="LibreryDescargaExcel\Blob.js-master\LICENSE.md" />
+    <Content Include="LibreryDescargaExcel\Blob.js-master\package.json" />
+    <Content Include="LibreryDescargaExcel\Blob.js-master\README.md" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +398,13 @@
     </Compile>
     <Compile Include="Default.aspx.vb">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DescargaReporte.aspx.designer.vb">
+      <DependentUpon>DescargaReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DescargaReporte.aspx.vb">
+      <DependentUpon>DescargaReporte.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="DesenlazarEquipo.aspx.designer.vb">
@@ -320,12 +567,20 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="LibreryDescargaExcel\TableExport\dist\tableexport.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -344,6 +599,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

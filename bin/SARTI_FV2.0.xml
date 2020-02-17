@@ -361,6 +361,69 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.DescargaReporte._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.DescargaReporte._ddl_consulta">
+<summary>
+Control ddl_consulta.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.DescargaReporte._pnl_EquiposAsignados">
+<summary>
+Control pnl_EquiposAsignados.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.DescargaReporte._gvEquiposAsignados">
+<summary>
+Control gvEquiposAsignados.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.DescargaReporte._dsEquiposAsignados">
+<summary>
+Control dsEquiposAsignados.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.DescargaReporte._dsEquipos">
+<summary>
+Control dsEquipos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.DescargaReporte._gvEquipos">
+<summary>
+Control gvEquipos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.DesenlazarEquipo._pnl_tablaEmpleados">
 <summary>
 Control pnl_tablaEmpleados.
@@ -1009,6 +1072,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.Reporteador._DGV_Equipos">
+<summary>
+Control DGV_Equipos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.Reporteador._DGV_EquiposAsignados">
 <summary>
 Control DGV_EquiposAsignados.
@@ -1027,36 +1099,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SARTI_FV2._0.Reporteador._DS_EquiposNOAsignados">
+<member name="F:SARTI_FV2._0.Reporteador._DS_Equipos">
 <summary>
-Control DS_EquiposNOAsignados.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.Reporteador._DS_EquiposDañados">
-<summary>
-Control DS_EquiposDañados.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.Reporteador._DS_EquiposTrash">
-<summary>
-Control DS_EquiposTrash.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.Reporteador._DS_TotalEquipos">
-<summary>
-Control DS_TotalEquipos.
+Control DS_Equipos.
 </summary>
 <remarks>
 Campo generado automáticamente.
