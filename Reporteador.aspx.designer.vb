@@ -41,6 +41,15 @@ Partial Public Class Reporteador
     Protected WithEvents ddl_consulta As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
+    '''Control DGV_Equipos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DGV_Equipos As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
     '''Control DGV_EquiposAsignados.
     '''</summary>
     '''<remarks>
@@ -59,38 +68,11 @@ Partial Public Class Reporteador
     Protected WithEvents DS_EquiposAsignados As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
-    '''Control DS_EquiposNOAsignados.
+    '''Control DS_Equipos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DS_EquiposNOAsignados As Global.System.Web.UI.WebControls.SqlDataSource
-    
-    '''<summary>
-    '''Control DS_EquiposDañados.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DS_EquiposDañados As Global.System.Web.UI.WebControls.SqlDataSource
-    
-    '''<summary>
-    '''Control DS_EquiposTrash.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DS_EquiposTrash As Global.System.Web.UI.WebControls.SqlDataSource
-    
-    '''<summary>
-    '''Control DS_TotalEquipos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DS_TotalEquipos As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents DS_Equipos As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
