@@ -81,32 +81,86 @@
        </a>
   </div>
 </nav>
-    <br><br><br> <!--MENU -->
-   <div class="container"><br>
-       <div class="pb-2 mt-4 mb-2 border-bottom">
-         <H2 class="texto">¡Bienvenido al SARTI!<br> </H2>            
-    </div>
-          <H2 class="texto"><small>Sistema para administracion de los recursos de TI.</small> </H2>  <br />
+    <br> <!--MENU -->
+   <div class="container">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <H2 class="texto">¡Bienvenido a SARTI!<br> </H2>            
+        </div>
+            <H2 class="texto"><small>Sistema para administracion de los recursos de TI.</small> </H2>  <br />
             <p>Con este sistema podras administrar diferentes ambitos como los siguientes:</p>
             <ul>
                 <li>Registrar cada recurso que ingrese a la empresa.</li>
                 <li>Ver el estato del bien.</li>
                 <li>Obtener detalles como, usuario al que se asigno, condicion del equipo, fecha de entrega etc.</li>
             </ul>   
-       <div class="texto  ">
-           <h4>Informacion sobre los modulos.</h4>
-       </div>
-       
-       <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title  texto "> Informacíon adicional</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Agrega la informacíon nesesaria para poder iniciar los movimientos necesarios.</h6>
-    <p class="card-text">Apartado desarrollado para que se genere la información necesaria para iniciar con los procesos de alta de usuario, registro de equipo y asignación de un equipo.</p>
-   
-  </div>
-</div>
+           <div class="texto  ">
+               <h4>Informacion sobre los modulos.</h4><br />
+           </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                   <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title  texto "> Informacíon adicional</h5>
+                        <p class="card-text">Genera la información necesaria para iniciar con los procesos de alta de usuario, registro de equipo y asignación de un equipo.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                   <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title  texto ">Administrador</h5>                
+                        <p class="card-text">Crea y administra los usuarios que administran la plataforma.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                   <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title  texto ">Empleado</h5>                
+                        <p class="card-text">Crea y administra los usuarios a los cuales se les asignaran los equipos existentes en el sistema.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                   <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title  texto ">Equipo</h5>                
+                        <p class="card-text">Registra, administra y visualiza reportes de los equipos registrados en el sistema.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                   <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title  texto ">Asignar equipo</h5>                
+                        <p class="card-text">Asigna a un empleado un equipo existente en Stock e imprime una responsiva con los datos de equipo y usuario como evidencia de la entrega.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                   <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title  texto ">Desenlazar equipo</h5>                
+                        <p class="card-text">Desenlaza un equipo asignado a un usuario y mandalo a stock.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                   <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title  texto ">Equipos a reemplazo</h5>                
+                        <p class="card-text">Visualiza un reporte de los equipos con un plazo de trabajo vencido (plazo de 3 años).</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
 
-        </div>
 
+       <br /><br /><br />
+    </div>
 </body>
 </html>
