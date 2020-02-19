@@ -132,7 +132,7 @@
                     </asp:GridView>
                 </div>
                 <div class="table-responsive">
-                    <asp:GridView ID="DGV_EquiposAsignados" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="DS_EquiposAsignados" EnableModelValidation="True" CssClass="table table-striped table-bordered table-hover" >
+                    <asp:GridView ID="DGV_EquiposAsignados" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="DS_EquiposAsignados" EnableModelValidation="True" CssClass="table table-striped table-bordered table-hover" Visible="false">
                         <Columns>
                             <asp:BoundField DataField="Marca" HeaderText="Marca" SortExpression="Marca" />
                             <asp:BoundField DataField="Modelo" HeaderText="Modelo" SortExpression="Modelo" />
@@ -173,8 +173,8 @@
         });
 
 
-        $('button').addClass('btn btn-success');
-        $('button').text('Exportar a Excel');
+        $('.xlsx').addClass('btn btn-success');
+        $('.xlsx').text('Exportar a Excel');
     </script>
 </body>
 </html>
