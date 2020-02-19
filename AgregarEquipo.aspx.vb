@@ -124,7 +124,7 @@ Public Class AgregarEquipo
         cmd.Parameters.AddWithValue("@Factura", FileFactura)
         cmd.Parameters.AddWithValue("@EmpresaComp", empresaComp)
 
-        'registro = cmd.ExecuteReader()
+        registro = cmd.ExecuteReader()
 
         If (registro.Read() = True) Then
             If (registro("TIPO_MENSAJE") = "EXITO") Then
