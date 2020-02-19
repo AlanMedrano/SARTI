@@ -23,6 +23,15 @@ Partial Public Class AgregarEquipo
     Protected WithEvents DDL_TipoDeEquipo As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
+    '''Control ddlEmpComp.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddlEmpComp As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
     '''Control FUpload_Factura.
     '''</summary>
     '''<remarks>
@@ -84,4 +93,13 @@ Partial Public Class AgregarEquipo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lbl_error_img As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control dsEmpresas.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dsEmpresas As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

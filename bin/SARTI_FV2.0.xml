@@ -46,6 +46,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.AgregarEquipo._ddlEmpComp">
+<summary>
+Control ddlEmpComp.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.AgregarEquipo._FUpload_Factura">
 <summary>
 Control FUpload_Factura.
@@ -103,6 +112,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.AgregarEquipo._lbl_error_img">
 <summary>
 Control lbl_error_img.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.AgregarEquipo._dsEmpresas">
+<summary>
+Control dsEmpresas.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -355,69 +373,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0._Default._lbl_error">
 <summary>
 Control lbl_error.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.DescargaReporte._form1">
-<summary>
-Control form1.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.DescargaReporte._ddl_consulta">
-<summary>
-Control ddl_consulta.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.DescargaReporte._pnl_EquiposAsignados">
-<summary>
-Control pnl_EquiposAsignados.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.DescargaReporte._gvEquiposAsignados">
-<summary>
-Control gvEquiposAsignados.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.DescargaReporte._dsEquiposAsignados">
-<summary>
-Control dsEquiposAsignados.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.DescargaReporte._dsEquipos">
-<summary>
-Control dsEquipos.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.DescargaReporte._gvEquipos">
-<summary>
-Control gvEquipos.
 </summary>
 <remarks>
 Campo generado automáticamente.

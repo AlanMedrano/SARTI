@@ -96,7 +96,6 @@
     <Content Include="Bootstrap\JS\bootstrap.min.js" />
     <Content Include="CargaResponsiva.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="DescargaReporte.aspx" />
     <Content Include="DesenlazarEquipo.aspx" />
     <Content Include="DesenlazarEquipostep2.aspx" />
     <Content Include="DetalleUserAdmin.aspx" />
@@ -398,13 +397,6 @@
     </Compile>
     <Compile Include="Default.aspx.vb">
       <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="DescargaReporte.aspx.designer.vb">
-      <DependentUpon>DescargaReporte.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DescargaReporte.aspx.vb">
-      <DependentUpon>DescargaReporte.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="DesenlazarEquipo.aspx.designer.vb">
