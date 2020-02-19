@@ -160,8 +160,10 @@
             <div class="row">
             
             <div class="col-lg-6">
+                <p>Empresa compradora</p>
+                <asp:DropDownList ID="ddlEmpComp" runat="server" DataSourceID="dsEmpresas" DataTextField="Empresa" DataValueField="IdEmpresa" CssClass="form-control" required></asp:DropDownList><br />
                 <p>Observaciones</p>
-            <textarea class="form-control" rows="9" name="detalles"></textarea>
+            <textarea class="form-control" rows="5" name="detalles"></textarea>
                 
                 </div>
             <div class="col-lg-6">
@@ -263,5 +265,6 @@
    
                     </form>
                     </div>
+    <asp:SqlDataSource ID="dsEmpresas" runat="server" ConnectionString="<%$ ConnectionStrings:SARTIConn %>" SelectCommand="SELECT * FROM empresa"></asp:SqlDataSource>
 </body>
 </html>

@@ -24,7 +24,8 @@ Public Class AgregarEquipo
         Dim ram As String = Request.Form.Item("ram")
         Dim dduro As String = Request.Form.Item("discoduro")
         Dim procesador As String = Request.Form.Item("procesador")
-        Dim FileFactura As String ' PENDIENTE    Filefactura
+        Dim empresaComp As Integer = Request.Form.Item("ddlEmpComp")
+        Dim FileFactura As String = ""
 
 
         Dim dt As New DataTable
@@ -67,8 +68,9 @@ Public Class AgregarEquipo
                 If (ext = ".png" Or ext = ".jpg" Or ext = ".pdf") Then
 
                     Try
-                        FUpload_Factura.SaveAs(Server.MapPath("~/Facturas_Equipos/" & "FACTURA_" & NFactura & "NSerie_" & n_serie & ext))
-                        RegistrarEquipo(TipoEquipo, Marca, Modelo, FechaCompra, Detalles, Falla, NFactura, Puerto_USB, Puerto_HDMI, Puerto_VGA, Puerto_Red, CD, TiempoGarantia, Validabluetooth, n_serie, ram, dduro, procesador)
+                        FileFactura = "FACTURA_" & NFactura & "NSerie_" & n_serie & ext
+                        FUpload_Factura.SaveAs(Server.MapPath("~/Facturas_Equipos/" & FileFactura))
+                        RegistrarEquipo(TipoEquipo, Marca, Modelo, FechaCompra, Detalles, Falla, NFactura, Puerto_USB, Puerto_HDMI, Puerto_VGA, Puerto_Red, CD, TiempoGarantia, Validabluetooth, n_serie, ram, dduro, procesador, empresaComp, FileFactura)
                     Catch ex As Exception
                         lbl_error_img.Text = "Al parecer se perdio la conexion con el Servidor, por favor intentalo nuevamente mas tarde."
                         pnl_errorImg.Visible = True
@@ -81,7 +83,7 @@ Public Class AgregarEquipo
                     pnl_errorImg.Visible = True
                 End If
             Else
-                RegistrarEquipo(TipoEquipo, Marca, Modelo, FechaCompra, Detalles, Falla, NFactura, Puerto_USB, Puerto_HDMI, Puerto_VGA, Puerto_Red, CD, TiempoGarantia, Validabluetooth, n_serie, ram, dduro, procesador)
+                RegistrarEquipo(TipoEquipo, Marca, Modelo, FechaCompra, Detalles, Falla, NFactura, Puerto_USB, Puerto_HDMI, Puerto_VGA, Puerto_Red, CD, TiempoGarantia, Validabluetooth, n_serie, ram, dduro, procesador, empresaComp, FileFactura)
 
 
             End If
@@ -93,7 +95,7 @@ Public Class AgregarEquipo
 
         End If
     End Sub
-    Private Sub RegistrarEquipo(TipoEquipo As Integer, Marca As String, Modelo As String, FechaCompra As String, Detalles As String, Falla As String, NFactura As String, Puerto_USB As Integer, Puerto_HDMI As Integer, Puerto_VGA As Integer, Puerto_Red As Integer, CD As Integer, TiempoGarantia As Integer, Validabluetooth As Integer, n_serie As String, ram As String, dduro As String, procesador As String)
+    Private Sub RegistrarEquipo(TipoEquipo As Integer, Marca As String, Modelo As String, FechaCompra As String, Detalles As String, Falla As String, NFactura As String, Puerto_USB As Integer, Puerto_HDMI As Integer, Puerto_VGA As Integer, Puerto_Red As Integer, CD As Integer, TiempoGarantia As Integer, Validabluetooth As Integer, n_serie As String, ram As String, dduro As String, procesador As String, empresaComp As Integer, FileFactura As String)
 
 
         Dim registro As SqlDataReader
@@ -119,9 +121,10 @@ Public Class AgregarEquipo
         cmd.Parameters.AddWithValue("@ram", ram)
         cmd.Parameters.AddWithValue("@Dduro", dduro)
         cmd.Parameters.AddWithValue("@Procesador", procesador)
-        cmd.Parameters.AddWithValue("@Factura", "") ' FileFactura PENDIENTE
+        cmd.Parameters.AddWithValue("@Factura", FileFactura)
+        cmd.Parameters.AddWithValue("@EmpresaComp", empresaComp)
 
-        registro = cmd.ExecuteReader()
+        'registro = cmd.ExecuteReader()
 
         If (registro.Read() = True) Then
             If (registro("TIPO_MENSAJE") = "EXITO") Then
