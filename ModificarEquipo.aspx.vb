@@ -17,7 +17,7 @@ Public Class ModificarEquipo
 
         If IsPostBack Then
             Dim modelo, marca, fecha_compra, detalles, falla, num_factura, num_serie, procesador, ram, disco_duro As String
-            Dim puertos_usb, puertos_hdmi, puertos_vga, puertos_red, unidad_cd, tiempo_garantia, Bluetooth, EstatusEquipo As String
+            Dim puertos_usb, puertos_hdmi, puertos_vga, puertos_red, unidad_cd, tiempo_garantia, Bluetooth, EstatusEquipo, EmpresaComp, checkEmp As String
             modelo = Page.Request.Form.Item("modelo")
             marca = Page.Request.Form.Item("marca")
             fecha_compra = Page.Request.Form.Item("feccompra")
@@ -36,12 +36,16 @@ Public Class ModificarEquipo
             tiempo_garantia = Page.Request.Form.Item("tiempogarantia")
             Bluetooth = Page.Request.Form.Item("inp_bluetooth")
             EstatusEquipo = Page.Request.Form.Item("DDL_estatusEquipo")
-
+            EmpresaComp = Page.Request.Form.Item("ddlEmprComp")
+            checkEmp = Page.Request.Form.Item("checkEmpresa")
+            If (checkEmp = Nothing) Then
+                EmpresaComp = ""
+            End If
             Dim Query As String = "UPDATE Usuario SET "
-            Dim Datos = New String() {Trim(modelo), Trim(marca), Trim(fecha_compra), Trim(detalles), Trim(falla), Trim(num_factura), Trim(num_serie), Trim(procesador), Trim(ram), Trim(disco_duro), Trim(puertos_usb), Trim(puertos_hdmi), Trim(puertos_vga), Trim(puertos_red), Trim(unidad_cd), Trim(tiempo_garantia), Trim(Bluetooth), Trim(EstatusEquipo)}
-            Dim valores = New String() {"Modelo='", "Marca='", "FechaCompra='", "Detalles='", "Falla='", "Numfactura='", "N_Serie='", "procesador='", "ram='", "DiscoDuro='", "PuertoUSB=", "PuertoHDMI=", "PuertoVGA=", "PuertoRed=", "UnidadCD=", "TiempoGarantia=", "Bluetooth=", "IdEstatus="}
+            Dim Datos = New String() {Trim(modelo), Trim(marca), Trim(fecha_compra), Trim(detalles), Trim(falla), Trim(num_factura), Trim(num_serie), Trim(procesador), Trim(ram), Trim(disco_duro), Trim(puertos_usb), Trim(puertos_hdmi), Trim(puertos_vga), Trim(puertos_red), Trim(unidad_cd), Trim(tiempo_garantia), Trim(Bluetooth), Trim(EstatusEquipo), Trim(EmpresaComp)}
+            Dim valores = New String() {"Modelo='", "Marca='", "FechaCompra='", "Detalles='", "Falla='", "Numfactura='", "N_Serie='", "procesador='", "ram='", "DiscoDuro='", "PuertoUSB=", "PuertoHDMI=", "PuertoVGA=", "PuertoRed=", "UnidadCD=", "TiempoGarantia=", "Bluetooth=", "IdEstatus=", "EmpresaCompradora="}
             '   Dim Datos(,) As String = {{"Modelo='", Trim(modelo)}, {"Marca='", Trim(marca)}, {"FechaCompra='",Trim(fecha_compra)}, {,}, {,}}
-            Dim update(17) As String
+            Dim update(19) As String
             Dim QUERY_UPDATE As String = "UPDATE Equipo SET "
             'CONTADORES...
             Dim v As Integer
@@ -51,12 +55,9 @@ Public Class ModificarEquipo
             cont = 0
             i = 1
 
-
-
-
             For Each item In Datos
                 If item <> "" Then ' VALIDAMOS QUE SE HAYA INGRESADO ALGUN DATO A MODIFICAR...
-                    If (valores(v) = "PuertoUSB=" Or valores(v) = "PuertoHDMI=" Or valores(v) = "PuertoVGA=" Or valores(v) = "PuertoRed=" Or valores(v) = "UnidadCD=" Or valores(v) = "TiempoGarantia=" Or valores(v) = "Bluetooth=" Or valores(v) = "IdEstatus=") Then 'VALIDAMOS SI EL VALOR POR MODIFICAR ES TIPO STRING O NUMERICO...
+                    If (valores(v) = "PuertoUSB=" Or valores(v) = "PuertoHDMI=" Or valores(v) = "PuertoVGA=" Or valores(v) = "PuertoRed=" Or valores(v) = "UnidadCD=" Or valores(v) = "TiempoGarantia=" Or valores(v) = "Bluetooth=" Or valores(v) = "IdEstatus=" Or valores(v) = "EmpresaCompradora=") Then 'VALIDAMOS SI EL VALOR POR MODIFICAR ES TIPO STRING O NUMERICO...
                         update(cont) = valores(v) & item
                     Else
                         update(cont) = valores(v) & item & "'"
@@ -77,26 +78,19 @@ Public Class ModificarEquipo
                 i = i + 1
             Next
 
+            If (QUERY_UPDATE <> "UPDATE Equipo SET ") Then
 
+                QUERY_UPDATE = QUERY_UPDATE & " WHERE IdEquipo= " & IdEquipo
 
-
-            QUERY_UPDATE = QUERY_UPDATE & " WHERE IdEquipo= " & IdEquipo
-
-            Dim registro As SqlDataReader
-            Dim conn As New SqlConnection(System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
-            conn.Open()
-            Dim cmd As SqlCommand = New SqlCommand(QUERY_UPDATE, conn)
-            cmd.CommandType = CommandType.Text
-            registro = cmd.ExecuteReader()
-            pnl_mensaje.Visible = True
-
-
-
-
+                Dim registro As SqlDataReader
+                Dim conn As New SqlConnection(System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
+                conn.Open()
+                Dim cmd As SqlCommand = New SqlCommand(QUERY_UPDATE, conn)
+                cmd.CommandType = CommandType.Text
+                registro = cmd.ExecuteReader()
+                pnl_mensaje.Visible = True
+            End If
         End If
-
-
-
 
         ' Obtenemos los datos del usuario
         Dim r As SqlDataReader
@@ -108,7 +102,7 @@ Public Class ModificarEquipo
             r = command.ExecuteReader()
 
             If (r.Read() = True) Then
-
+                
                 lbl_Detalles.Text = r("Detalles")
                 lbl_DiscoDuro.Text = r("DiscoDuro")
                 lbl_fallas.Text = r("Falla")
@@ -125,27 +119,34 @@ Public Class ModificarEquipo
                 lbl_PuertosVGA.Text = r("PuertoVGA")
                 lbl_RAM.Text = r("ram")
                 lbl_TipoEquipo.Text = r("TipoEquipo")
-                lbl_UnidadCD.Text = r("UnidadCD")
-
-            Select Case r("IdEstatus")
-                Case 1
-                    lbl_estatusEquipo.Text = "En Stock"
-                Case 2
-                    lbl_estatusEquipo.Text = "Asignada"
-                Case 3
-                    lbl_estatusEquipo.Text = "Dañada"
-                Case 4
-                    lbl_estatusEquipo.Text = "Trash"
-            End Select
-
-            If (r("IdEstatus") = 2) Then
-                Pnl_estatusEquipo.Visible = False
+            lbl_UnidadCD.Text = r("UnidadCD")
+            If (IsDBNull(r("EmpresaCompradora"))) Then
+                lblEmprComp.Text = "Sin datos de empresa"
             Else
-                Pnl_estatusEquipo.Visible = True
+                lblEmprComp.Text = r("EmpresaCompradora")
             End If
 
 
-            If (r("Bluetooth") = 1) Then
+
+            Select Case r("IdEstatus")
+                    Case 1
+                        lbl_estatusEquipo.Text = "En Stock"
+                    Case 2
+                        lbl_estatusEquipo.Text = "Asignada"
+                    Case 3
+                        lbl_estatusEquipo.Text = "Dañada"
+                    Case 4
+                        lbl_estatusEquipo.Text = "Trash"
+                End Select
+
+                If (r("IdEstatus") = 2) Then
+                    Pnl_estatusEquipo.Visible = False
+                Else
+                    Pnl_estatusEquipo.Visible = True
+                End If
+
+
+                If (r("Bluetooth") = 1) Then
                     lbl_bluetooth.Text = "Si"
                 Else
                     lbl_bluetooth.Text = "No"

@@ -11,20 +11,28 @@
     <link rel="stylesheet" href="Estilos_SARTI.css"/>    <!-- ESTILOS CREADOS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  <!-- ICONOS -->
          <!-- JS -->
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
     <title>Vigia | SARTI</title>
 
-    <script type="text/javascript" >
+    <script >
+        $(document).ready(function () {
+            $("#checkEmpresa").prop("checked", false);
+            //$("#checkEmpresa").value("");
 
-
+            $('#checkEmpresa').on('change', function () {
+                if ($(this).is(':checked')) {
+                    $("#ddlEmprComp").prop("disabled", false);
+                } else {
+                    $("#ddlEmprComp").prop("disabled", true);
+                }
+            });
+        });
     </script>
 </head>
 <body>
 
-    
-                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="Inicio.aspx">Grupo Vigia | SARTI</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -153,25 +161,22 @@
                  <b>Fallas: </b> <asp:Label ID="lbl_fallas" runat="server" Text=""></asp:Label>
              </div>
              <div class="col-lg-3">
-                 <b>Detalles: </b> <asp:Label ID="lbl_Detalles" runat="server" Text=""></asp:Label>
+                 <b>Observaciones: </b> <asp:Label ID="lbl_Detalles" runat="server" Text=""></asp:Label>
              </div>
          </div>
              <div class="row">
                  <div class="col-lg-6">
                      <b>Bluetooth: </b><asp:Label ID="lbl_bluetooth" runat="server" Text=""></asp:Label>
                  </div>
-                 <div class="col-lg-6"></div>
-             </div><br />
-             <div class="row">
+                 <div class="col-lg-6">
+                     <b>Empresa compradora: </b><asp:Label ID="lblEmprComp" runat="server" Text=""></asp:Label>
+                 </div>
                  <div class="col-lg-6">
                      <b>Estatus del equipo: </b><asp:Label ID="lbl_estatusEquipo" runat="server" Text=""></asp:Label>
                  </div>
-                 <div class="col-lg-6"></div>
-             </div>
+             </div><br />
              
-             
-             
-             <br /><br />
+             <br />
 
              <asp:Panel ID="pnl_mensaje" runat="server" Visible="false">
                 <div class="alert alert-success" role="alert">
@@ -214,8 +219,12 @@
             <div class="row">
             
             <div class="col-lg-6">
-                <p>Detalles</p>
-                <textarea class="form-control" rows="9" name="detalles"></textarea>
+                <p>Empresa compradora</p>
+                <input type="checkbox" id="checkEmpresa" runat="server" value=""/> <span>Editar Empresa</span> 
+                <asp:DropDownList ID="ddlEmprComp" runat="server" DataSourceID="dsEmpresas" DataTextField="Empresa" DataValueField="IdEmpresa" CssClass="form-control" disabled>
+                </asp:DropDownList>
+                <p>Observaciones</p>
+                <textarea class="form-control" rows="5" name="detalles"></textarea>
             </div>
             <div class="col-lg-6">
                 <p>Falla</p>
@@ -321,6 +330,6 @@
             </div> <br /><br />
          </form>
     </div>
-
+    <asp:SqlDataSource ID="dsEmpresas" runat="server" ConnectionString="<%$ ConnectionStrings:SARTIConn %>" SelectCommand="SELECT * FROM EMPRESA"></asp:SqlDataSource>
 </body>
 </html>
