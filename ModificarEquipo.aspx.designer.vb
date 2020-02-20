@@ -176,6 +176,15 @@ Partial Public Class ModificarEquipo
     Protected WithEvents lbl_bluetooth As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control lblEmprComp.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblEmprComp As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''Control lbl_estatusEquipo.
     '''</summary>
     '''<remarks>
@@ -192,6 +201,24 @@ Partial Public Class ModificarEquipo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents pnl_mensaje As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''Control checkEmpresa.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents checkEmpresa As Global.System.Web.UI.HtmlControls.HtmlInputCheckBox
+    
+    '''<summary>
+    '''Control ddlEmprComp.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddlEmprComp As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
     '''Control inp_bluetooth.
@@ -219,4 +246,13 @@ Partial Public Class ModificarEquipo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DDL_estatusEquipo As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control dsEmpresas.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dsEmpresas As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

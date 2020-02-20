@@ -694,6 +694,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._lblEmprComp">
+<summary>
+Control lblEmprComp.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.ModificarEquipo._lbl_estatusEquipo">
 <summary>
 Control lbl_estatusEquipo.
@@ -706,6 +715,24 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.ModificarEquipo._pnl_mensaje">
 <summary>
 Control pnl_mensaje.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._checkEmpresa">
+<summary>
+Control checkEmpresa.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._ddlEmprComp">
+<summary>
+Control ddlEmprComp.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -733,6 +760,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.ModificarEquipo._DDL_estatusEquipo">
 <summary>
 Control DDL_estatusEquipo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._dsEmpresas">
+<summary>
+Control dsEmpresas.
 </summary>
 <remarks>
 Campo generado automáticamente.
