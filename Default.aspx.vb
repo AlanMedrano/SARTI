@@ -20,15 +20,18 @@ Public Class _Default
             If registro.Read() = True Then
                 If registro("estatus") = "Activo" Then
                     Session("Correo") = registro("Correo")
+                    Session("t_user") = registro("type_admin")
                     Response.Redirect("Inicio.aspx")
                 Else
                     Session("Correo") = ""
+                    Session("t_user") = ""
                     PanelError.Visible = True
                     lbl_error.Text = "Usuario sin acceso al sistema"
                 End If
 
             Else
                 Session("Correo") = ""
+                Session("t_user") = ""
                 PanelError.Visible = True
                 lbl_error.Text = "<strong>¡Vaya!</strong> al parecer uno de los datos son incorrectos, intentalo de nuevo."
             End If
