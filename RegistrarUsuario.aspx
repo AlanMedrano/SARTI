@@ -13,10 +13,7 @@
       <!-- JS -->
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
     <title>Vigia | SARTI</title>
-
-
     <script type="text/javascript">
 
         function VaidaUsuario() {
@@ -53,7 +50,7 @@
     </script>
 </head>
 <body>
-             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="Inicio.aspx">Grupo Vigia | SARTI</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -118,83 +115,64 @@
   </div>
 </nav>
   <br> <!--MENU -->
-
-     <div class="container texto"><br><br>
-           <H2 class="texto">Registro de Empleado.</H2><br>
-           
-            <form action="RegistrarUsuario.aspx" method="post" runat="server" onsubmit="return VaidaUsuario()">
-            <div class="row">
-                <div class="col-lg-4">
-                 <p>Nombre:</p>
-
-            <input class="form-control" placeholder="" name="nombre" type="text" required>
+    <div class="container texto"><br><br>
+        <H2 class="texto">Registro de Empleado.</H2><br>           
+        <form action="RegistrarUsuario.aspx" method="post" runat="server" onsubmit="return VaidaUsuario()">
+            <asp:Panel ID="pnl_exito" runat="server" Visible="False">
+                <div class="alert alert-success" role="alert">
+                    <asp:Label ID="lbl_exito" runat="server" Text="Label"></asp:Label>
                 </div>
-                <div class="col-lg-4">
-                <p>Correo <small class="text-muted">(ingresar solo minusculas)</small></p>
-            <input class="form-control" type="email" name="correo" required>
+            </asp:Panel>           
+            <asp:Panel ID="pnl_error" runat="server" Visible="False">
+                <div class="alert alert-danger" role="alert">
+                    <asp:Label ID="lbl_error" runat="server" Text="Label"></asp:Label>
                 </div>
-                <div class="col-lg-4">
-                     <p>Num empleado:</p>
-                <input class="form-control" name="NEmpleado" type="number" required/>
-
+            </asp:Panel>
+            <asp:Panel ID="pnlRegistraUser" runat="server" Visible="false">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>Nombre:</p>
+                        <input class="form-control" placeholder="" name="nombre" type="text" required>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>Correo <small class="text-muted">(ingresar solo minusculas)</small></p>
+                        <input class="form-control" type="email" name="correo" required>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>Num empleado:</p>
+                        <input class="form-control" name="NEmpleado" type="number" required/>
+                    </div>               
+                </div><br>            
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>Puesto:</p>
+                        <asp:DropDownList ID="DDL_Puesto" name="DDL_Puesto" runat="server" CssClass="form-control" >
+                            <asp:ListItem Value="0">Selecciona un puesto</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Empresa:</p>
+                        <asp:DropDownList ID="DDL_Empresa" name="DDL_Empresa" runat="server" cssclass="form-control" >
+                            <asp:ListItem Value="0">Selecciona una empresa</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>            
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>Departamento:</p>
+                        <asp:DropDownList ID="DDL_departamento" name="DDL_departamento" runat="server" CssClass="form-control">
+                            <asp:ListItem Value="0">Selecciona un departamento</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Ubicación</p> 
+                        <asp:DropDownList ID="DDL_Ubicacion" name="DDL_Ubicacion" runat="server" CssClass="form-control">
+                            <asp:ListItem Value="0">Selecciona una ubicacion</asp:ListItem>
+                        </asp:DropDownList><br>                
+                    </div>            
                 </div>
-               
-            </div><br>
-            
-            <div class="row">
-                <div class="col-lg-6">
-                  <p>Puesto:</p>
-
-                    <asp:DropDownList ID="DDL_Puesto" name="DDL_Puesto" runat="server" CssClass="form-control" >
-                        <asp:ListItem Value="0">Selecciona un puesto</asp:ListItem>
-                    </asp:DropDownList>
-
-                </div>
-                <div class="col-lg-6">
-                 <p>Empresa:</p>
-
-                    <asp:DropDownList ID="DDL_Empresa" name="DDL_Empresa" runat="server" cssclass="form-control" >
-                        <asp:ListItem Value="0">Selecciona una empresa</asp:ListItem>
-                    </asp:DropDownList>
-
-                </div>
-            
-            </div> <br>
-             <div class="row">
-                <div class="col-lg-6">
-                    <p>Departamento:</p>
-
-                    <asp:DropDownList ID="DDL_departamento" name="DDL_departamento" runat="server" CssClass="form-control">
-                        <asp:ListItem Value="0">Selecciona un departamento</asp:ListItem>
-                    </asp:DropDownList>
-
-                </div>
-                <div class="col-lg-6">
-                    <p>Ubicación</p> 
-
-
-                    <asp:DropDownList ID="DDL_Ubicacion" name="DDL_Ubicacion" runat="server" CssClass="form-control">
-                        <asp:ListItem Value="0">Selecciona una ubicacion</asp:ListItem>
-                    </asp:DropDownList>
-<br>
-                
-                </div>
-            
-            </div>
-         <asp:Panel ID="pnl_exito" runat="server" Visible="False">
-              <div class="alert alert-success" role="alert">
-                  <asp:Label ID="lbl_exito" runat="server" Text="Label"></asp:Label>
-</div>
-         </asp:Panel>
-           
-         <asp:Panel ID="pnl_error" runat="server" Visible="False">
-             <div class="alert alert-danger" role="alert">
-                 <asp:Label ID="lbl_error" runat="server" Text="Label"></asp:Label>
-</div>
-         </asp:Panel>
-            
-            
-            <button class="btn btn-outline-primary" type="submit">Registrar usuario</button><br><br>
+                <button class="btn btn-outline-primary" type="submit">Registrar usuario</button><br><br>
+            </asp:Panel>            
            </form> 
     </div>
 </body>

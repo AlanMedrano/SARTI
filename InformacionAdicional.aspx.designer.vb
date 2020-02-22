@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class InformacionAdicional
     
     '''<summary>
+    '''Control pnlRegistraInfo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlRegistraInfo As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''Control Pnl_exito.
     '''</summary>
     '''<remarks>
@@ -48,4 +57,13 @@ Partial Public Class InformacionAdicional
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Lbl_Error As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control pnlErrorAcceso.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlErrorAcceso As Global.System.Web.UI.WebControls.Panel
 End Class

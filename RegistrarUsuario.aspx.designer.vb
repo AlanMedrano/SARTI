@@ -14,42 +14,6 @@ Option Explicit On
 Partial Public Class RegistrarUsuario
     
     '''<summary>
-    '''Control DDL_Puesto.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DDL_Puesto As Global.System.Web.UI.WebControls.DropDownList
-    
-    '''<summary>
-    '''Control DDL_Empresa.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DDL_Empresa As Global.System.Web.UI.WebControls.DropDownList
-    
-    '''<summary>
-    '''Control DDL_departamento.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DDL_departamento As Global.System.Web.UI.WebControls.DropDownList
-    
-    '''<summary>
-    '''Control DDL_Ubicacion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DDL_Ubicacion As Global.System.Web.UI.WebControls.DropDownList
-    
-    '''<summary>
     '''Control pnl_exito.
     '''</summary>
     '''<remarks>
@@ -84,4 +48,49 @@ Partial Public Class RegistrarUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lbl_error As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control pnlRegistraUser.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlRegistraUser As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''Control DDL_Puesto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DDL_Puesto As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control DDL_Empresa.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DDL_Empresa As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control DDL_departamento.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DDL_departamento As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control DDL_Ubicacion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DDL_Ubicacion As Global.System.Web.UI.WebControls.DropDownList
 End Class

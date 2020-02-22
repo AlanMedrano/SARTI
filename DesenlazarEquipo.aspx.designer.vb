@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class DesenlazarEquipo
     
     '''<summary>
+    '''Control pnlDesenlazar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlDesenlazar As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''Control pnl_tablaEmpleados.
     '''</summary>
     '''<remarks>
@@ -39,4 +48,13 @@ Partial Public Class DesenlazarEquipo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents pnl_NoEmpleados As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''Control pnlerror.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlerror As Global.System.Web.UI.WebControls.Panel
 End Class

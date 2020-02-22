@@ -87,6 +87,9 @@
     </div>
            <br><br><br>
            <form action="AsignarEquipo_Step1.aspx" method="post" runat="server">
+               <asp:Panel ID="pnlAsigna" runat="server">
+
+               
             <div class="row">
                 <div class="col-lg-2">
                   <b class="texto">Buscar por correo:</b><br />
@@ -123,7 +126,10 @@
                 </div>
 
                </asp:Panel>
-
+              </asp:Panel>
+               <asp:Panel ID="pnlNoaccess" runat="server" CssClass="alert alert-danger">
+                   Lo sentimos, no cuentas con permisos para asignar un equipo a un empleado.
+               </asp:Panel>
            </form> 
     </div>
 

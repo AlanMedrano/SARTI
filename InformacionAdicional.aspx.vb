@@ -5,6 +5,14 @@ Public Class InformacionAdicional
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("Correo") = "" Then ' Valido usuario logeado.
             Response.Redirect("Default.aspx")
+        Else
+            If Session("t_user") = "maestro" Then
+                pnlRegistraInfo.Visible = True
+                pnlErrorAcceso.Visible = False
+            Else
+                pnlRegistraInfo.Visible = False
+                pnlErrorAcceso.Visible = True
+            End If
         End If
 
         Dim Opcion As String = Request.Form.Item("ListInfoAd")

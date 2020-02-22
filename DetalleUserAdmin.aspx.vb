@@ -5,6 +5,12 @@ Public Class DetalleUserAdmin
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("Correo") = "" Then ' Valido usuario logeado.
             Response.Redirect("Default.aspx")
+        Else
+            If Session("t_user") = "maestro" Then
+                pnlModificar.Visible = True
+            Else
+                pnlModificar.Visible = False
+            End If
         End If
 
         Dim user As Integer = Page.Request.QueryString("user")
@@ -20,7 +26,7 @@ Public Class DetalleUserAdmin
             Session("Modifica_user") = user
         End If
 
-        If IsPostBack Then
+        If IsPostBack = True And Session("t_user") = "maestro" Then
 
             Dim datos = New String() {nombre, correo, estatus, password}
             Dim valores = New String() {"Nombre='", "Correo='", "estatus='", "Contraseña='"}

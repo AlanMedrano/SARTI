@@ -5,6 +5,12 @@ Public Class ModificarUsuario
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("Correo") = "" Then ' Valido usuario logeado.
             Response.Redirect("Default.aspx")
+        Else
+            If Session("t_user") = "maestro" Then
+                pnlModEmp.Visible = True
+            Else
+                pnlModEmp.Visible = False
+            End If
         End If
 
         Dim usuario As Integer = Page.Request.QueryString("empleado")

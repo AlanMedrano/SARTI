@@ -48,7 +48,7 @@
     <title>Vigia | SARTI</title>
 </head>
 <body>
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="Inicio.aspx">Grupo Vigia | SARTI</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -113,9 +113,12 @@
   </div>
 </nav>
     <div class="container"><br />
-                                    <div class="pb-2 mt-4 mb-2 border-bottom">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
         <H2 class="texto">Selecciona el empleado al cual se le desenlazara alguno de sus equipos asignados</H2>
     </div><br /><br />
+        <asp:Panel ID="pnlDesenlazar" runat="server" Visible="false">
+
+        
             <div class="row">
                 <div class="col-lg-2">
                   <b class="texto">Busqueda por nombre:</b><br />
@@ -146,6 +149,10 @@
                 </div>
         </asp:Panel>
 </form>
+    </asp:Panel>
+        <asp:Panel ID="pnlerror" runat="server" CssClass="alert alert-danger" Visible="false">
+            Lo sentimos, no cuentas con permisos para desenlazar un equipo.
+        </asp:Panel>
         </div>
 </body>
 </html>

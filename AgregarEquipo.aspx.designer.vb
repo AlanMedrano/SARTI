@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class AgregarEquipo
     
     '''<summary>
+    '''Control pnlAddEquipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlAddEquipo As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''Control DDL_TipoDeEquipo.
     '''</summary>
     '''<remarks>
@@ -93,6 +102,15 @@ Partial Public Class AgregarEquipo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lbl_error_img As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control pnlErrorAccess.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlErrorAccess As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''Control dsEmpresas.

@@ -5,6 +5,14 @@ Public Class DesenlazarEquipo
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("Correo") = "" Then ' Valido usuario logeado.
             Response.Redirect("Default.aspx")
+        Else
+            If Session("t_user") = "maestro" Then
+                pnlDesenlazar.Visible = True
+                pnlerror.Visible = False
+            Else
+                pnlDesenlazar.Visible = False
+                pnlerror.Visible = True
+            End If
         End If
 
         Dim ds As New DataSet

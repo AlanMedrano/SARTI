@@ -6,6 +6,12 @@ Public Class ModificarEquipo
 
         If Session("Correo") = "" Then ' Valido usuario logeado.
             Response.Redirect("Default.aspx")
+        Else
+            If Session("t_user") = "maestro" Then
+                pnlActualizar.Visible = True
+            Else
+                pnlActualizar.Visible = False
+            End If
         End If
         Dim IdEquipo As Integer = Page.Request.QueryString("Equipo")
 

@@ -48,4 +48,13 @@ Partial Public Class DetalleUserAdmin
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents pnl_mensaje As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''Control pnlModificar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlModificar As Global.System.Web.UI.WebControls.Panel
 End Class

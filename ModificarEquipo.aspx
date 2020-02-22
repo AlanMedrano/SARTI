@@ -185,9 +185,12 @@
              </asp:Panel>
 
              <br /><br />
-           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Actualizar datos de equipo
-            </button><br /><br />
+             <asp:Panel ID="pnlActualizar" runat="server" Visible="false">
+               <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Actualizar datos de equipo
+                </button><br /><br />
+             </asp:Panel>
+
          <div class="collapse" id="collapseExample">
             <div class="card card-body">
       <div class="row">

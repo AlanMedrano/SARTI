@@ -5,6 +5,15 @@ Public Class RegistrarUsuario
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("Correo") = "" Then ' Valido usuario logeado.
             Response.Redirect("Default.aspx")
+        Else
+            If Session("t_user") = "maestro" Then
+                pnlRegistraUser.Visible = True
+                pnl_error.Visible = False
+            Else
+                pnlRegistraUser.Visible = False
+                pnl_error.Visible = True
+                lbl_error.Text = "Lo sentimos no cuentas con permisos para registrar a un empleado."
+            End If
         End If
 
         Dim Nombre As String = Request.Form.Item("nombre")
@@ -54,7 +63,7 @@ Public Class RegistrarUsuario
 
 
         'Insertamos un nuevo usuario
-        If IsPostBack Then
+        If IsPostBack = True And Session("t_user") = "maestro" Then
             Dim registro As SqlDataReader
             Dim conn As New SqlConnection(System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
             conn.Open()

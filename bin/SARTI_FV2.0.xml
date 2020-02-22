@@ -37,6 +37,15 @@ SARTI_FV2.0
  Devuelve el objeto de registro Asp.
  </summary>
 </member>
+<member name="F:SARTI_FV2._0.AgregarEquipo._pnlAddEquipo">
+<summary>
+Control pnlAddEquipo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.AgregarEquipo._DDL_TipoDeEquipo">
 <summary>
 Control DDL_TipoDeEquipo.
@@ -118,9 +127,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.AgregarEquipo._pnlErrorAccess">
+<summary>
+Control pnlErrorAccess.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.AgregarEquipo._dsEmpresas">
 <summary>
 Control dsEmpresas.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.AsignarEquipo_Step1._pnlAsigna">
+<summary>
+Control pnlAsigna.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -148,6 +175,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.AsignarEquipo_Step1._pnl_Nodata">
 <summary>
 Control pnl_Nodata.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.AsignarEquipo_Step1._pnlNoaccess">
+<summary>
+Control pnlNoaccess.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -379,6 +415,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.DesenlazarEquipo._pnlDesenlazar">
+<summary>
+Control pnlDesenlazar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.DesenlazarEquipo._pnl_tablaEmpleados">
 <summary>
 Control pnl_tablaEmpleados.
@@ -400,6 +445,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.DesenlazarEquipo._pnl_NoEmpleados">
 <summary>
 Control pnl_NoEmpleados.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.DesenlazarEquipo._pnlerror">
+<summary>
+Control pnlerror.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -487,6 +541,24 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.DetalleUserAdmin._pnlModificar">
+<summary>
+Control pnlModificar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.InformacionAdicional._pnlRegistraInfo">
+<summary>
+Control pnlRegistraInfo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.InformacionAdicional._Pnl_exito">
 <summary>
 Control Pnl_exito.
@@ -517,6 +589,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.InformacionAdicional._Lbl_Error">
 <summary>
 Control Lbl_Error.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.InformacionAdicional._pnlErrorAcceso">
+<summary>
+Control pnlErrorAcceso.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -721,6 +802,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.ModificarEquipo._pnlActualizar">
+<summary>
+Control pnlActualizar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.ModificarEquipo._checkEmpresa">
 <summary>
 Control checkEmpresa.
@@ -883,6 +973,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SARTI_FV2._0.ModificarUsuario._pnlModEmp">
+<summary>
+Control pnlModEmp.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SARTI_FV2._0.ModificarUsuario._DDL_Puesto">
 <summary>
 Control DDL_Puesto.
@@ -964,36 +1063,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SARTI_FV2._0.RegistrarUsuario._DDL_Puesto">
+<member name="F:SARTI_FV2._0.RegistrarAdministrador._pnlregistraU">
 <summary>
-Control DDL_Puesto.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.RegistrarUsuario._DDL_Empresa">
-<summary>
-Control DDL_Empresa.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.RegistrarUsuario._DDL_departamento">
-<summary>
-Control DDL_departamento.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SARTI_FV2._0.RegistrarUsuario._DDL_Ubicacion">
-<summary>
-Control DDL_Ubicacion.
+Control pnlregistraU.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1030,6 +1102,51 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SARTI_FV2._0.RegistrarUsuario._lbl_error">
 <summary>
 Control lbl_error.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.RegistrarUsuario._pnlRegistraUser">
+<summary>
+Control pnlRegistraUser.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.RegistrarUsuario._DDL_Puesto">
+<summary>
+Control DDL_Puesto.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.RegistrarUsuario._DDL_Empresa">
+<summary>
+Control DDL_Empresa.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.RegistrarUsuario._DDL_departamento">
+<summary>
+Control DDL_departamento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SARTI_FV2._0.RegistrarUsuario._DDL_Ubicacion">
+<summary>
+Control DDL_Ubicacion.
 </summary>
 <remarks>
 Campo generado automáticamente.

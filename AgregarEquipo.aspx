@@ -61,7 +61,7 @@
     </script>
 </head>
 <body>
-                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="Inicio.aspx">Grupo Vigia | SARTI</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -126,9 +126,11 @@
   </div>
 </nav>
      <div class="container texto">
-         <div class="pb-2 mt-4 mb-2 border-bottom">
-        <H2 class="texto">Registro de nuevo equipo.</H2>
-    </div><br>
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <H2 class="texto">Registro de nuevo equipo.</H2>
+        </div><br>
+         <asp:Panel ID="pnlAddEquipo" runat="server" Visible="false">
+
                 <form method="post" action="AgregarEquipo.aspx" onsubmit="return ValidaEquipo()" runat="server">       
             <div class="row">
                <div class="col-lg-4">
@@ -263,8 +265,12 @@
         </asp:Panel>
     <button class="btn btn-outline-primary btn-lg" type="submit" text="Registrar">Registrar equipo</button><br><br> <br>
    
-                    </form>
-                    </div>
+    </form>
+</asp:Panel>
+         <asp:Panel ID="pnlErrorAccess" runat="server" CssClass="alert alert-danger" Visible="false">
+             Lo sentimos, no cuentas con permisos para registrar un equipo.
+         </asp:Panel>
+</div> <!-- FIN CONTAINER -->
     <asp:SqlDataSource ID="dsEmpresas" runat="server" ConnectionString="<%$ ConnectionStrings:SARTIConn %>" SelectCommand="SELECT * FROM empresa"></asp:SqlDataSource>
 </body>
 </html>

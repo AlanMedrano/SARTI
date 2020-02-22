@@ -122,6 +122,15 @@ Partial Public Class ModificarUsuario
     Protected WithEvents pnl_Relacionequipo As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
+    '''Control pnlModEmp.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlModEmp As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''Control DDL_Puesto.
     '''</summary>
     '''<remarks>

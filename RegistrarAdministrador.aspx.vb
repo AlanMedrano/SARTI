@@ -5,13 +5,22 @@ Public Class RegistrarAdministrador
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("Correo") = "" Then ' Valido usuario logeado.
             Response.Redirect("Default.aspx")
+        Else
+            If Session("t_user") = "maestro" Then
+                Pnl_error.Visible = False
+                pnlregistraU.Visible = True
+            Else
+                Pnl_error.Visible = True
+                Lbl_Error.Text = "Lo sentimos, no cuentas con permisos para agregar un Administrador."
+                pnlregistraU.Visible = False
+            End If
         End If
 
         Dim Name As String = Request.Form.Item("Nombre")
         Dim Email As String = Request.Form.Item("Correo")
         Dim Password As String = Request.Form.Item("Contraseña")
 
-        If (Name <> "" And Password <> "") Then
+        If (Name <> "" And Password <> "" And Email <> "" And Session("t_user") = "maestro") Then
             Dim dt As New DataTable
             Dim registro As SqlDataReader
             Dim conn As New SqlConnection(System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))

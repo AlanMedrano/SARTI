@@ -48,4 +48,13 @@ Partial Public Class RegistrarAdministrador
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Lbl_Error As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control pnlregistraU.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents pnlregistraU As Global.System.Web.UI.WebControls.Panel
 End Class

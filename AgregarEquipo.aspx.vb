@@ -5,6 +5,14 @@ Public Class AgregarEquipo
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("Correo") = "" Then ' Valido usuario logeado.
             Response.Redirect("Default.aspx")
+        Else
+            If Session("t_user") = "maestro" Then
+                pnlAddEquipo.Visible = True
+                pnlErrorAccess.Visible = False
+            Else
+                pnlErrorAccess.Visible = False
+                pnlErrorAccess.Visible = True
+            End If
         End If
         Dim TipoEquipo As Integer = Request.Form.Item("DDL_TipoDeEquipo")
         Dim Marca As String = Request.Form.Item("marca")

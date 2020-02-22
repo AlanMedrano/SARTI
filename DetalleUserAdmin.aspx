@@ -29,10 +29,9 @@
         }
 
     </script>
-
 </head>
 <body>
-              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="Inicio.aspx">Grupo Vigia | SARTI</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -96,12 +95,11 @@
        </a>
   </div>
 </nav>
-        <div class="container"><br><br>
-             <form action="DetalleUserAdmin.aspx" method="post" runat="server" >
+    <div class="container"><br><br>
+        <form action="DetalleUserAdmin.aspx" method="post" runat="server" >
             <div class="pb-2 mt-4 mb-2 border-bottom">
-        <H2 class="texto">Administradores.  </H2>
-    </div>
-         <br>
+                <H2 class="texto">Administradores.  </H2>
+            </div><br>
             <div class="row texto">
                 <div class="col-lg-5">
                     <b> Administrador: </b><asp:Label ID="lbl_nombre" runat="server" Text="Label"></asp:Label>
@@ -112,59 +110,47 @@
                 <div class="col-lg-2">
                      <p><b>Contraseña: </b>******</p>
                 </div>
-
             </div>
             <b class="texto">Estatus:</b> <asp:Label class="texto" ID="lbl_estatus" runat="server" Text="Label"></asp:Label><br />
             <br />
-         <asp:Panel ID="pnl_mensaje" runat="server" Visible="false">
-              <div class="alert alert-success" role="alert">
-                El usuario se modificado exitosamente.
-                </div><br/>
-          </asp:Panel>
-          <p></p>
-             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Actualizar información
-  </button><br /><br />
-
-
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-             
-
-             <div class="row texto">
-                <div class="col-lg-6">
-                    <b> Nombre: </b>                    
-            <input class="form-control" id="nombre" name="nombre" placeholder="" type="text" />
+            <asp:Panel ID="pnl_mensaje" runat="server" Visible="false">
+                <div class="alert alert-success" role="alert"> El usuario se modificado exitosamente.</div><br/>
+            </asp:Panel>
+            <asp:Panel ID="pnlModificar" runat="server" Visible="false">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Actualizar información
+                </button>
+            </asp:Panel><br /><br />
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="row texto">
+                        <div class="col-lg-6">
+                            <b>Nombre: </b><input class="form-control" id="nombre" name="nombre" placeholder="" type="text" />
+                        </div>
+                        <div class="col-lg-6">
+                            <b>Correo: </b><input class="form-control" id="correo" name="correo" placeholder="" type="email" />
+                        </div>            
+                    </div><br>
+                    <div class="row texto">
+                        <div class="col-lg-6">
+                            <b>Contraseña: </b><input class="form-control" name="Contraseña" id="Contraseña"  type="password" />
+                        </div>
+                        <div class="col-lg-6">
+                            <b>Confirmar contraseña: </b> <input class="form-control" id="ConfirmContraseña"  type="password" /><br/>
+                        </div>            
+                    </div>
+                    <b class="texto">Estatus:</b>
+                    <select class="form-control" id="estatus" name="estatus">
+                        <option value="">Selecciona</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Bloqueado</option>
+                    </select><br/><br /><br />
+                    <div class="alert alert-primary" role="alert">
+                        <i class="fas fa-money-check"></i> Por favor ingresa solo los campos que deseas actualizar.
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary" onclick="return VaidaPass()" >Actualizar</button><br/><br/>         
                 </div>
-                <div class="col-lg-6">
-                    <b>Correo: </b>
-            <input class="form-control" id="correo" name="correo" placeholder="" type="email" />
-                </div>            
-            </div><br>
-              <div class="row texto">
-                <div class="col-lg-6">
-                   <b>Contraseña: </b>
-            <input class="form-control" name="Contraseña" id="Contraseña"  type="password" />
-                </div>
-                <div class="col-lg-6">
-                     <b>Confirmar contraseña:</b>
-            <input class="form-control" id="ConfirmContraseña"  type="password" /><br/>
-                </div>            
-            </div>
-                   <b class="texto">Estatus:</b>
-<select class="form-control" id="estatus" name="estatus">
-  <option value="">Selecciona</option>
-  <option value="Activo">Activo</option>
-  <option value="Inactivo">Bloqueado</option>
-</select><br/><br /><br />
-                <div class="alert alert-primary" role="alert">
-  <i class="fas fa-money-check"></i> Por favor ingresa solo los campos que deseas actualizar.
-</div>
-
-            <button type="submit" class="btn btn-outline-primary" onclick="return VaidaPass()" >Actualizar</button><br/><br/>
-         
-  </div>
-</div> <br /><br />
+            </div> <br /><br />
         </form>
     </div>
 </body>

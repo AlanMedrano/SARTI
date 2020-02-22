@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-            <!--META VIEWPORT -->
+    <!--META VIEWPORT -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />    <!-- ESTILOS BOOTSTRAP-->
     <link rel="stylesheet" href="Estilos_SARTI.css"/>    <!-- ESTILOS CREADOS -->
@@ -13,9 +13,7 @@
       <!-- JS -->
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
     <title>Vigia | SARTI</title>
-
     <script type="text/javascript">
 
         function MuestraDiv(div) {
@@ -128,7 +126,7 @@
     </script>
 </head>
 <body>
-                   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="Inicio.aspx">Grupo Vigia | SARTI</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -193,76 +191,73 @@
   </div>
 </nav>
     <br><br>
-        <div class="container">
-             <div class="pb-2 mt-4 mb-2 border-bottom">
-        <H2 class="texto">Modulo de información adicional.</H2>
-    </div> <br><br>
-          <form action="InformacionAdicional.aspx" method="post" onsubmit="return ValidaDatos()">
-            <div class="row" >
-                <div class="col-lg">
-            <b class="texto">Selecciona el modulo al que deseas agragar información:</b>    
+    <div class="container">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <H2 class="texto">Modulo de información adicional.</H2>
+        </div> <br><br>
+        <form action="InformacionAdicional.aspx" method="post" onsubmit="return ValidaDatos()">
+            <asp:Panel ID="pnlRegistraInfo" runat="server" Visible="false">
+                <div class="row" >
+                    <div class="col-lg">
+                        <b class="texto">Selecciona el modulo al que deseas agragar información:</b>    
+                    </div>
+                    <div class="col-lg">                   
+                        <select id="ListInfoAd" name="ListInfoAd" class="form-control" onchange="MuestraDiv(this)" >               
+                            <option value="1">Departamento</option>
+                            <option value="2">Ubicación</option>
+                            <option value="3">Tipo de equipo</option>
+                            <option value="4">Puesto</option>
+                            <option value="5">Empresa</option>
+                        </select>                      
+                    </div>            
+                </div> <br><br>
+                <div id="departamento" class="texto " style="display:block">
+                    <p>Ingresa el departamento:</p>   
+                    <input class="form-control"  placeholder="Sistemas" name="departamento" id="form_departamento" /> <br>            
+                </div>        
+                <div id="Ubicacion" class="texto" style="display:none">
+                    <p>Agregar ubicación:</p>
+                    <input class="form-control" name="Ubicacion" placeholder="Oficinas UU" id="form_ubicacion" /><br>
+                    <p>Link de la ubicación:</p>
+                    <input class="form-control" name="LinkUbicacion" placeholder="www.google.com/maps" id="form_LinkUbicacion" />             
                 </div>
-                <div class="col-lg">
-                   
-           <select id="ListInfoAd" name="ListInfoAd" class="form-control" onchange="MuestraDiv(this)" >               
-               <option value="1">Departamento</option>
-               <option value="2">Ubicación</option>
-               <option value="3">Tipo de equipo</option>
-               <option value="4">Puesto</option>
-                <option value="5">Empresa</option>
-            </select>  
-                    
-                </div>            
-            </div> <br><br>
-    <div id="departamento" class="texto " style="display:block">
-        <p>Ingresa el departamento:</p>   
-        <input class="form-control"  placeholder="Sistemas" name="departamento" id="form_departamento" /> <br>
-            
-            </div>        
-    <div id="Ubicacion" class="texto" style="display:none">
-            <p>Agregar ubicación:</p>
-        <input class="form-control" name="Ubicacion" placeholder="Oficinas UU" id="form_ubicacion" /><br>
-        <p>Link de la ubicación:</p>
-            <input class="form-control" name="LinkUbicacion" placeholder="www.google.com/maps" id="form_LinkUbicacion" /> 
-            
-            </div>
-    <div id="TipoEquipo" class="texto" style="display:none"><br>
-        <p>Tipo de equipo:</p>
-            <input class="form-control" name="TipoEquipo" placeholder="Laptop" id="form_tipoequipo"/>            
-            </div>
-    <div id="Puesto" class="texto" style="display:none"><br>           
-        <div class="row">
-            <div class="col-lg-8">
-             <p>Puesto:</p>
-        <input class="form-control" placeholder="Gerente de TI" name="Puesto" id="form_puesto"/>
-            </div>
-            <div class="col-lg-4">
-             <p>Tiempo de rotación por año:</p>        
-        <input class="form-control"  type="number" min="1" name="TiempoRotacion" id="form_tiemporotacion"/>            
-            </div>       
-        </div>        
-            </div><br>            
-            <div id="Empresa" style="display:none">
-            <p class="texto">Nombre de empresa:</p>
-            <input class="form-control" name="empresa" placeholder="SAVSA" id="form_empresa" />
-            
-            </div>
-           <br> 
-            <asp:Panel ID="Pnl_exito" runat="server" Visible="False">
-               <div class="alert alert-success" role="alert">
-                   <asp:Label ID="Lbl_Exito" runat="server" Text="Label"></asp:Label>
-</div>
+                <div id="TipoEquipo" class="texto" style="display:none"><br>
+                    <p>Tipo de equipo:</p>
+                    <input class="form-control" name="TipoEquipo" placeholder="Laptop" id="form_tipoequipo"/>            
+                </div>
+                <div id="Puesto" class="texto" style="display:none"><br>           
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Puesto:</p>
+                            <input class="form-control" placeholder="Gerente de TI" name="Puesto" id="form_puesto"/>
+                        </div>
+                        <div class="col-lg-4">
+                            <p>Tiempo de rotación por año:</p>        
+                            <input class="form-control"  type="number" min="1" name="TiempoRotacion" id="form_tiemporotacion"/>            
+                        </div>       
+                    </div>        
+                </div><br>            
+                <div id="Empresa" style="display:none">
+                    <p class="texto">Nombre de empresa:</p>
+                    <input class="form-control" name="empresa" placeholder="SAVSA" id="form_empresa" />            
+                </div><br> 
+                <asp:Panel ID="Pnl_exito" runat="server" Visible="False">
+                   <div class="alert alert-success" role="alert">
+                       <asp:Label ID="Lbl_Exito" runat="server" Text="Label"></asp:Label>
+                    </div>
+                </asp:Panel>
+                <asp:Panel ID="Pnl_error" runat="server" Visible="False">
+                    <div class="alert alert-danger" role="alert">
+                       <asp:Label ID="Lbl_Error" runat="server" Text="Label"></asp:Label>
+                    </div>
+                </asp:Panel><br />
+                <button type="submit" class="btn btn-outline-primary" >Agregar</button>    
             </asp:Panel>
-
-            <asp:Panel ID="Pnl_error" runat="server" Visible="False">
-                               <div class="alert alert-danger" role="alert">
-                   <asp:Label ID="Lbl_Error" runat="server" Text="Label"></asp:Label>
-</div>
+            <asp:Panel ID="pnlErrorAcceso" runat="server" CssClass="alert alert-danger" Visible="false">
+                Lo sentimos no cuentas con permisos para registrar información adicional.
             </asp:Panel>
-
-            <br />
-         <button type="submit" class="btn btn-outline-primary" >Agregar</button>   <br><br>     
-            </form>
+            <br><br>    
+        </form>
     </div>
 </body>
 </html>
