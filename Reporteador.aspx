@@ -118,7 +118,7 @@
                             <asp:BoundField DataField="Modelo" HeaderText="Modelo" SortExpression="Modelo"></asp:BoundField>
                             <asp:BoundField DataField="Detalles" HeaderText="Observaciones" SortExpression="Detalles"></asp:BoundField>
                             <asp:BoundField DataField="FechaCompra" HeaderText="Fecha compra" SortExpression="FechaCompra"></asp:BoundField>
-                            <asp:BoundField DataField="TiempoGarantia" HeaderText="Tiempo garantia" SortExpression="TiempoGarantia"></asp:BoundField>
+                            <asp:BoundField DataField="TiempoGarantia" HeaderText="Meses garantia" SortExpression="TiempoGarantia"></asp:BoundField>
                             <asp:BoundField DataField="PuertoUSB" HeaderText="Puerto USB" SortExpression="PuertoUSB"></asp:BoundField>
                             <asp:BoundField DataField="PuertoHDMI" HeaderText="Puerto HDMI" SortExpression="PuertoHDMI"></asp:BoundField>
                             <asp:BoundField DataField="PuertoVGA" HeaderText="Puerto VGA" SortExpression="PuertoVGA"></asp:BoundField>
@@ -141,7 +141,7 @@
                             <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
                             <asp:BoundField DataField="Detalles" HeaderText="Observaciones" SortExpression="Detalles" />
                             <asp:BoundField DataField="FechaCompra" HeaderText="Fecha compra" SortExpression="FechaCompra" />
-                            <asp:BoundField DataField="TiempoGarantia" HeaderText="Tiempo Garantia" SortExpression="TiempoGarantia" />
+                            <asp:BoundField DataField="TiempoGarantia" HeaderText="Meses Garantia" SortExpression="TiempoGarantia" />
                             <asp:BoundField DataField="PuertoUSB" HeaderText="Puerto USB" SortExpression="PuertoUSB" />
                             <asp:BoundField DataField="PuertoHDMI" HeaderText="Puerto HDMI" SortExpression="PuertoHDMI" />
                             <asp:BoundField DataField="PuertoVGA" HeaderText="Puerto VGA" SortExpression="PuertoVGA" />

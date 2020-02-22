@@ -144,7 +144,7 @@
                  <b>Unidades CD: </b> <asp:Label ID="lbl_UnidadCD" runat="server" Text=""></asp:Label>
              </div>
              <div class="col-lg-2">
-                 <b>Años de garantia: </b> <asp:Label ID="lbl_Garantia" runat="server" Text=""></asp:Label>
+                 <b>Meses de garantia: </b> <asp:Label ID="lbl_Garantia" runat="server" Text=""></asp:Label>
              </div>
          </div><br />
          <div class="row">
@@ -265,7 +265,7 @@
                 </div>
                 <div class="col-lg-2">
                     
-                     <p>Años de garantia</p>
+                     <p>Meses de garantia</p>
             <input class="form-control" name="tiempogarantia" placeholder="" type="number" min="0" id="TiempoGarantia" >
                    
                 </div>

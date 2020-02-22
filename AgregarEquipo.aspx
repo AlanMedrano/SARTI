@@ -210,7 +210,7 @@
                 </div>
                 <div class="col-lg-2">
                     
-                     <p>Años de garantia</p>
+                     <p>Meses de garantia</p>
             <input class="form-control" name="tiempogarantia" placeholder="" type="number" min="0" id="TiempoGarantia" >
                    
                 </div>
