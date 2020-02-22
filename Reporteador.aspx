@@ -113,48 +113,50 @@
                 <div class="table-responsive">
                     <asp:GridView ID="DGV_Equipos" runat="server" AllowSorting="True" DataSourceID="DS_Equipos" EnableModelValidation="True" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False" >
                         <Columns>
-                            <asp:BoundField DataField="Definicion" HeaderText="Tipo de equipo" SortExpression="Definicion"></asp:BoundField>
+                            <asp:BoundField DataField="Definicion" HeaderText="Tipo Equipo" SortExpression="Definicion"></asp:BoundField>
                             <asp:BoundField DataField="Marca" HeaderText="Marca" SortExpression="Marca"></asp:BoundField>
                             <asp:BoundField DataField="Modelo" HeaderText="Modelo" SortExpression="Modelo"></asp:BoundField>
-                            <asp:BoundField DataField="Detalles" HeaderText="Detalles" SortExpression="Detalles"></asp:BoundField>
-                            <asp:BoundField DataField="FechaCompra" HeaderText="FechaCompra" SortExpression="FechaCompra"></asp:BoundField>
-                            <asp:BoundField DataField="TiempoGarantia" HeaderText="TiempoGarantia" SortExpression="TiempoGarantia"></asp:BoundField>
-                            <asp:BoundField DataField="PuertoUSB" HeaderText="PuertoUSB" SortExpression="PuertoUSB"></asp:BoundField>
-                            <asp:BoundField DataField="PuertoHDMI" HeaderText="PuertoHDMI" SortExpression="PuertoHDMI"></asp:BoundField>
-                            <asp:BoundField DataField="PuertoVGA" HeaderText="PuertoVGA" SortExpression="PuertoVGA"></asp:BoundField>
-                            <asp:BoundField DataField="PuertoRed" HeaderText="PuertoRed" SortExpression="PuertoRed"></asp:BoundField>
-                            <asp:BoundField DataField="UnidadCD" HeaderText="UnidadCD" SortExpression="UnidadCD"></asp:BoundField>
-                            <asp:BoundField DataField="N_Serie" HeaderText="N_Serie" SortExpression="N_Serie"></asp:BoundField>
-                            <asp:BoundField DataField="ram" HeaderText="ram" SortExpression="ram"></asp:BoundField>
-                            <asp:BoundField DataField="DiscoDuro" HeaderText="DiscoDuro" SortExpression="DiscoDuro"></asp:BoundField>
-                            <asp:BoundField DataField="procesador" HeaderText="procesador" SortExpression="procesador"></asp:BoundField>
+                            <asp:BoundField DataField="Detalles" HeaderText="Observaciones" SortExpression="Detalles"></asp:BoundField>
+                            <asp:BoundField DataField="FechaCompra" HeaderText="Fecha compra" SortExpression="FechaCompra"></asp:BoundField>
+                            <asp:BoundField DataField="TiempoGarantia" HeaderText="Tiempo garantia" SortExpression="TiempoGarantia"></asp:BoundField>
+                            <asp:BoundField DataField="PuertoUSB" HeaderText="Puerto USB" SortExpression="PuertoUSB"></asp:BoundField>
+                            <asp:BoundField DataField="PuertoHDMI" HeaderText="Puerto HDMI" SortExpression="PuertoHDMI"></asp:BoundField>
+                            <asp:BoundField DataField="PuertoVGA" HeaderText="Puerto VGA" SortExpression="PuertoVGA"></asp:BoundField>
+                            <asp:BoundField DataField="PuertoRed" HeaderText="Puerto red" SortExpression="PuertoRed"></asp:BoundField>
+                            <asp:BoundField DataField="UnidadCD" HeaderText="Unidad CD" SortExpression="UnidadCD"></asp:BoundField>
+                            <asp:BoundField DataField="N_Serie" HeaderText="N° Serie" SortExpression="N_Serie"></asp:BoundField>
+                            <asp:BoundField DataField="ram" HeaderText="RAM" SortExpression="ram"></asp:BoundField>
+                            <asp:BoundField DataField="DiscoDuro" HeaderText="Disco duro" SortExpression="DiscoDuro"></asp:BoundField>
+                            <asp:BoundField DataField="procesador" HeaderText="Procesador" SortExpression="procesador"></asp:BoundField>
+                            <asp:BoundField DataField="Empresa_Comp" HeaderText="Empresa comp." ReadOnly="True" SortExpression="Empresa_Comp" />
                         </Columns>
                     </asp:GridView>
                 </div>
                 <div class="table-responsive">
-                    <asp:GridView ID="DGV_EquiposAsignados" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="DS_EquiposAsignados" EnableModelValidation="True" CssClass="table table-striped table-bordered table-hover" Visible="false">
+                    <asp:GridView ID="DGV_EquiposAsignados" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="DS_EquiposAsignados" EnableModelValidation="True" CssClass="table table-striped table-bordered table-hover" Visible="False">
                         <Columns>
                             <asp:BoundField DataField="Marca" HeaderText="Marca" SortExpression="Marca" />
                             <asp:BoundField DataField="Modelo" HeaderText="Modelo" SortExpression="Modelo" />
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                             <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
-                            <asp:BoundField DataField="Detalles" HeaderText="Detalles" SortExpression="Detalles" />
-                            <asp:BoundField DataField="FechaCompra" HeaderText="Fecha Compra" SortExpression="FechaCompra" />
-                            <asp:BoundField DataField="PuertoUSB" HeaderText="Puertos USB" SortExpression="PuertoUSB" />
-                            <asp:BoundField DataField="PuertoHDMI" HeaderText="Puertos HDMI" SortExpression="PuertoHDMI" />
-                            <asp:BoundField DataField="PuertoVGA" HeaderText="Puertos VGA" SortExpression="PuertoVGA" />
-                            <asp:BoundField DataField="PuertoRed" HeaderText="Puertos Red" SortExpression="PuertoRed" />
+                            <asp:BoundField DataField="Detalles" HeaderText="Observaciones" SortExpression="Detalles" />
+                            <asp:BoundField DataField="FechaCompra" HeaderText="Fecha compra" SortExpression="FechaCompra" />
                             <asp:BoundField DataField="TiempoGarantia" HeaderText="Tiempo Garantia" SortExpression="TiempoGarantia" />
+                            <asp:BoundField DataField="PuertoUSB" HeaderText="Puerto USB" SortExpression="PuertoUSB" />
+                            <asp:BoundField DataField="PuertoHDMI" HeaderText="Puerto HDMI" SortExpression="PuertoHDMI" />
+                            <asp:BoundField DataField="PuertoVGA" HeaderText="Puerto VGA" SortExpression="PuertoVGA" />
+                            <asp:BoundField DataField="PuertoRed" HeaderText="Puerto Red" SortExpression="PuertoRed" />
                             <asp:BoundField DataField="UnidadCD" HeaderText="Unidad CD" SortExpression="UnidadCD" />
                             <asp:BoundField DataField="N_Serie" HeaderText="N° Serie" SortExpression="N_Serie" />
                             <asp:BoundField DataField="ram" HeaderText="RAM" SortExpression="ram" />
                             <asp:BoundField DataField="DiscoDuro" HeaderText="Disco Duro" SortExpression="DiscoDuro" />
                             <asp:BoundField DataField="procesador" HeaderText="Procesador" SortExpression="procesador" />
+                            <asp:BoundField DataField="Empresa_Comp" HeaderText="Empresa Comp." ReadOnly="True" SortExpression="Empresa_Comp" />
                         </Columns>
                     </asp:GridView>
                 </div>
 
-            <asp:SqlDataSource ID="DS_EquiposAsignados" runat="server" ConnectionString="<%$ ConnectionStrings:SARTIConn %>" SelectCommand="SELECT E.Marca, E.Modelo, u.Nombre, u.Correo, E.Detalles, E.FechaCompra, E.TiempoGarantia, E.PuertoUSB, E.PuertoHDMI, E.PuertoVGA, E.PuertoRed, E.UnidadCD, E.N_Serie, E.ram, E.DiscoDuro, E.procesador from dominio_equipo as DE inner join Equipo as e on e.IdEquipo = de.IdEquipo inner join Usuario as u on u.IdUsuario = de.IdUsuario where de.Estatus = 1 "></asp:SqlDataSource>
+            <asp:SqlDataSource ID="DS_EquiposAsignados" runat="server" ConnectionString="<%$ ConnectionStrings:SARTIConn %>" SelectCommand="SELECT E.Marca, E.Modelo, u.Nombre, u.Correo, E.Detalles, E.FechaCompra, E.TiempoGarantia, E.PuertoUSB, E.PuertoHDMI, E.PuertoVGA, E.PuertoRed, E.UnidadCD, E.N_Serie, E.ram, E.DiscoDuro, E.procesador, IIF(E.EmpresaCompradora IS NULL , 'Sin empresa', EMP.Empresa) AS Empresa_Comp FROM dominio_equipo AS DE INNER JOIN Equipo AS e ON e.IdEquipo = de.IdEquipo INNER JOIN Usuario AS u ON u.IdUsuario = de.IdUsuario LEFT JOIN Empresa AS EMP ON EMP.IdEmpresa = E.EmpresaCompradora WHERE de.Estatus = 1 "></asp:SqlDataSource>
             <asp:SqlDataSource ID="DS_Equipos" runat="server" ConnectionString="<%$ ConnectionStrings:SARTIConn %>" SelectCommand="getReporteEquipo" SelectCommandType="StoredProcedure">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="ddl_consulta" Name="CONSULTA" PropertyName="SelectedValue" Type="Int32" />
