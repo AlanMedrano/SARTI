@@ -18,6 +18,7 @@ Public Class DetalleUserAdmin
         Dim correo As String = Page.Request.Form.Item("correo")
         Dim estatus As String = Page.Request.Form.Item("estatus")
         Dim password As String = Page.Request.Form.Item("Contraseña")
+        Dim typeUser As String = Page.Request.Form.Item("typeAdmin")
         Dim QUERY_UPDATE As String = "UPDATE Usuario_Administracion SET "
 
         If user = 0 Then
@@ -28,9 +29,9 @@ Public Class DetalleUserAdmin
 
         If IsPostBack = True And Session("t_user") = "maestro" Then
 
-            Dim datos = New String() {nombre, correo, estatus, password}
-            Dim valores = New String() {"Nombre='", "Correo='", "estatus='", "Contraseña='"}
-            Dim update(3) As String
+            Dim datos = New String() {nombre, correo, estatus, password, typeUser}
+            Dim valores = New String() {"Nombre='", "Correo='", "estatus='", "Contraseña='", "type_admin='"}
+            Dim update(5) As String
             Dim cont As Integer = 0
             Dim i As Integer = 1
             Dim v As Integer = 0
@@ -68,7 +69,7 @@ Public Class DetalleUserAdmin
 
         Dim ds As New DataSet
         Dim dt As New DataTable
-        Dim QUERY As String = "SELECT Nombre, Correo, estatus from Usuario_Administracion WHERE IdUser = " & user
+        Dim QUERY As String = "SELECT Nombre, Correo, estatus, type_admin from Usuario_Administracion WHERE IdUser = " & user
         Dim da As New SqlDataAdapter(QUERY, System.Configuration.ConfigurationManager.AppSettings("Sistema_SARTI"))
 
         da.Fill(dt)
@@ -78,6 +79,7 @@ Public Class DetalleUserAdmin
                 lbl_nombre.Text = row("Nombre").ToString
                 lbl_correo.Text = row("Correo").ToString
                 lbl_estatus.Text = row("estatus").ToString
+                lbltypeAdmin.Text = row("type_admin").ToString
             Next
 
         End If

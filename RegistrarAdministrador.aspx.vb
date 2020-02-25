@@ -19,6 +19,7 @@ Public Class RegistrarAdministrador
         Dim Name As String = Request.Form.Item("Nombre")
         Dim Email As String = Request.Form.Item("Correo")
         Dim Password As String = Request.Form.Item("Contraseña")
+        Dim typeAdmin As String = Request.Form.Item("ddlTypeAdmin")
 
         If (Name <> "" And Password <> "" And Email <> "" And Session("t_user") = "maestro") Then
             Dim dt As New DataTable
@@ -30,6 +31,7 @@ Public Class RegistrarAdministrador
             cmd.Parameters.AddWithValue("@Name", Name)
             cmd.Parameters.AddWithValue("@Email", Email)
             cmd.Parameters.AddWithValue("@Password", Password)
+            cmd.Parameters.AddWithValue("@typeAdmin", typeAdmin)
 
             registro = cmd.ExecuteReader()
             If registro.Read() = True Then

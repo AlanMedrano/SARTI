@@ -111,7 +111,17 @@
                      <p><b>Contraseña: </b>******</p>
                 </div>
             </div>
-            <b class="texto">Estatus:</b> <asp:Label class="texto" ID="lbl_estatus" runat="server" Text="Label"></asp:Label><br />
+            <div class="row">
+                <div class="col-lg-5">
+                    <b class="texto">Estatus:</b> <asp:Label class="texto" ID="lbl_estatus" runat="server" Text="Label"></asp:Label><br />
+                </div>
+                <div class="col-lg-5">
+                    <b class="texto">Tipo de administrador: </b>
+                    <asp:Label CssClass="texto" ID="lbltypeAdmin" runat="server" Text=""></asp:Label> 
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            
             <br />
             <asp:Panel ID="pnl_mensaje" runat="server" Visible="false">
                 <div class="alert alert-success" role="alert"> El usuario se modificado exitosamente.</div><br/>
@@ -139,12 +149,25 @@
                             <b>Confirmar contraseña: </b> <input class="form-control" id="ConfirmContraseña"  type="password" /><br/>
                         </div>            
                     </div>
-                    <b class="texto">Estatus:</b>
-                    <select class="form-control" id="estatus" name="estatus">
-                        <option value="">Selecciona</option>
-                        <option value="Activo">Activo</option>
-                        <option value="Inactivo">Bloqueado</option>
-                    </select><br/><br /><br />
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <b class="texto">Estatus:</b>
+                            <select class="form-control" id="estatus" name="estatus">
+                                <option value="">Selecciona</option>
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Bloqueado</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                            <b class="texto">Tipo de administrador:</b>
+                            <select class="form-control" id="typeAdmin" name="typeAdmin">
+                                <option value="">Selecciona</option>
+                                <option value="visor">Administrador visor</option>
+                                <option value="maestro">Administrador Maestro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/><br /><br />
                     <div class="alert alert-primary" role="alert">
                         <i class="fas fa-money-check"></i> Por favor ingresa solo los campos que deseas actualizar.
                     </div>

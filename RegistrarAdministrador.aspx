@@ -131,6 +131,15 @@
                 <input class="form-control" name="ConfirmContraseña" placeholder="" type="password" id="ConfirmContraseña" required><br>
                     </div>            
                 </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <select name="ddlTypeAdmin" id="ddlTypeAdmin" class="form-control">
+                            <option value="visor">Administrador visor</option>
+                            <option value="maestro">Administrador maestro</option>
+                        </select>                
+                    </div>
+                </div><br />
+
                 <button type="submit" class="btn btn-outline-primary" onclick="return VaidaPass()">Ingresar usuario</button><br><br>
             </asp:Panel>                        
              </form>
