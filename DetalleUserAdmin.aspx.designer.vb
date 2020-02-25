@@ -41,6 +41,15 @@ Partial Public Class DetalleUserAdmin
     Protected WithEvents lbl_estatus As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control lbltypeAdmin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lbltypeAdmin As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''Control pnl_mensaje.
     '''</summary>
     '''<remarks>
