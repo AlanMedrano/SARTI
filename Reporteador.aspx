@@ -124,7 +124,7 @@
                             <asp:BoundField DataField="PuertoVGA" HeaderText="Puerto VGA" SortExpression="PuertoVGA"></asp:BoundField>
                             <asp:BoundField DataField="PuertoRed" HeaderText="Puerto red" SortExpression="PuertoRed"></asp:BoundField>
                             <asp:BoundField DataField="UnidadCD" HeaderText="Unidad CD" SortExpression="UnidadCD"></asp:BoundField>
-                            <asp:BoundField DataField="N_Serie" HeaderText="N° Serie" SortExpression="N_Serie"></asp:BoundField>
+                            <asp:BoundField DataField="N_Serie" HeaderText="Num Serie" SortExpression="N_Serie"></asp:BoundField>
                             <asp:BoundField DataField="ram" HeaderText="RAM" SortExpression="ram"></asp:BoundField>
                             <asp:BoundField DataField="DiscoDuro" HeaderText="Disco duro" SortExpression="DiscoDuro"></asp:BoundField>
                             <asp:BoundField DataField="procesador" HeaderText="Procesador" SortExpression="procesador"></asp:BoundField>
@@ -147,7 +147,7 @@
                             <asp:BoundField DataField="PuertoVGA" HeaderText="Puerto VGA" SortExpression="PuertoVGA" />
                             <asp:BoundField DataField="PuertoRed" HeaderText="Puerto Red" SortExpression="PuertoRed" />
                             <asp:BoundField DataField="UnidadCD" HeaderText="Unidad CD" SortExpression="UnidadCD" />
-                            <asp:BoundField DataField="N_Serie" HeaderText="N° Serie" SortExpression="N_Serie" />
+                            <asp:BoundField DataField="N_Serie" HeaderText="Num Serie" SortExpression="N_Serie" />
                             <asp:BoundField DataField="ram" HeaderText="RAM" SortExpression="ram" />
                             <asp:BoundField DataField="DiscoDuro" HeaderText="Disco Duro" SortExpression="DiscoDuro" />
                             <asp:BoundField DataField="procesador" HeaderText="Procesador" SortExpression="procesador" />
@@ -168,15 +168,15 @@
     </form>
     <script>
         $('table').tableExport({
-            formats: ["xlsx"],
+            formats: ["csv"],
             position: 'button',
             bootstrap: false,
             filename: "SARTI_Reporte"
         });
 
 
-        $('.xlsx').addClass('btn btn-success');
-        $('.xlsx').text('Exportar a Excel');
+        $('.csv').addClass('btn btn-success');
+        $('.csv').text('Exportar a Excel');
     </script>
 </body>
 </html>
