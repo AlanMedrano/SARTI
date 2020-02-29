@@ -109,7 +109,8 @@
                     <div class="col-lg-6"><br /></div>
                 </div>
             </div><br /><br />
-
+            <button class="btn btn-outline-success" id="btnExcel" type="button"> <i class='far fa-file-excel'></i> Descargar Excel</button>
+            <br /><br />
                 <div class="table-responsive">
                     <asp:GridView ID="DGV_Equipos" runat="server" AllowSorting="True" DataSourceID="DS_Equipos" EnableModelValidation="True" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False" >
                         <Columns>
@@ -173,10 +174,10 @@
             bootstrap: false,
             filename: "SARTI_Reporte"
         });
-
-
-        $('.csv').addClass('btn btn-success');
-        $('.csv').text('Exportar a Excel');
+        $('.csv').hide();
+        $('#btnExcel').click(function () {
+            $(".csv").click();
+        });
     </script>
 </body>
 </html>
