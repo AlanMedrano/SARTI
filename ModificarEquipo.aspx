@@ -171,10 +171,15 @@
                  <div class="col-lg-6">
                      <b>Empresa compradora: </b><asp:Label ID="lblEmprComp" runat="server" Text=""></asp:Label>
                  </div>
-                 <div class="col-lg-6">
-                     <b>Estatus del equipo: </b><asp:Label ID="lbl_estatusEquipo" runat="server" Text=""></asp:Label>
-                 </div>
              </div><br />
+             <div class="row">
+                <div class="col-lg-6">
+                    <b>Estatus del equipo: </b><asp:Label ID="lbl_estatusEquipo" runat="server" Text=""></asp:Label>
+                </div>
+                 <div class="col-lg-6">
+                     <b>Usuario: </b><asp:Label ID="lblOwner" runat="server" Text=""></asp:Label>
+                 </div>
+             </div>
              
              <br />
 

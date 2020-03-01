@@ -194,6 +194,15 @@ Partial Public Class ModificarEquipo
     Protected WithEvents lbl_estatusEquipo As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control lblOwner.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblOwner As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''Control pnl_mensaje.
     '''</summary>
     '''<remarks>
